@@ -11,6 +11,7 @@
 #import "Services.h"
 
 #import "MapViewController.h"
+#import "DecorListViewController.h"
 
 @interface LoginViewController ()
 
@@ -39,7 +40,7 @@
         
         if(success == YES)
         {
-            [self performSegueWithIdentifier:@"toMap" sender:sender];
+            [self performSegueWithIdentifier:@"toDecorList" sender:sender];
         }
         else
         {
@@ -54,13 +55,18 @@
 // This will get called too before the view appears
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"toMap"]) {
+//    if ([[segue identifier] isEqualToString:@"toMap"]) {
+//        MapViewController *vc = [segue destinationViewController];
+//        
+//        // Pass the information to your destination view
+//        [vc setName:@"Salomé..."];
+//    }
+//    else
+        if ([[segue identifier] isEqualToString:@"toDecorList"]) {
         
         // Get destination view
-        MapViewController *vc = [segue destinationViewController];
+        //DecorListViewController *vc = [segue destinationViewController];
         
-        // Pass the information to your destination view
-        [vc setName:@"Salomé..."];
     }
 }
 

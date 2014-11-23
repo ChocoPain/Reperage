@@ -19,6 +19,8 @@
 		0951880F1A22500B00193100 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951880E1A22500B00193100 /* MapViewController.m */; };
 		095188111A22540500193100 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095188101A22540500193100 /* MapKit.framework */; };
 		099ACAB91A227D9500F568C0 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAB81A227D9500F568C0 /* launch.png */; };
+		099ACABC1A22846A00F568C0 /* Classification.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACABB1A22846A00F568C0 /* Classification.m */; };
+		099ACABF1A228D8100F568C0 /* DecorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACABE1A228D8100F568C0 /* DecorListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		0951880E1A22500B00193100 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		095188101A22540500193100 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		099ACAB81A227D9500F568C0 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		099ACABA1A22846A00F568C0 /* Classification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classification.h; sourceTree = "<group>"; };
+		099ACABB1A22846A00F568C0 /* Classification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classification.m; sourceTree = "<group>"; };
+		099ACABD1A228D8100F568C0 /* DecorListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecorListViewController.h; sourceTree = "<group>"; };
+		099ACABE1A228D8100F568C0 /* DecorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecorListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,8 @@
 				095187ED1A22346000193100 /* Main.storyboard */,
 				095187F01A22346000193100 /* Images.xcassets */,
 				095187F21A22346000193100 /* LaunchScreen.xib */,
+				099ACABD1A228D8100F568C0 /* DecorListViewController.h */,
+				099ACABE1A228D8100F568C0 /* DecorListViewController.m */,
 				0951880D1A22500B00193100 /* MapViewController.h */,
 				0951880E1A22500B00193100 /* MapViewController.m */,
 				092332801A225DDC00BF80FB /* AdoptingAnAnnotation.h */,
@@ -145,6 +153,8 @@
 			children = (
 				0951880A1A223F7800193100 /* Services.h */,
 				0951880B1A223F7800193100 /* Services.m */,
+				099ACABA1A22846A00F568C0 /* Classification.h */,
+				099ACABB1A22846A00F568C0 /* Classification.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -271,7 +281,9 @@
 				0951880C1A223F7800193100 /* Services.m in Sources */,
 				0951880F1A22500B00193100 /* MapViewController.m in Sources */,
 				095187E91A22346000193100 /* AppDelegate.m in Sources */,
+				099ACABF1A228D8100F568C0 /* DecorListViewController.m in Sources */,
 				095187E61A22346000193100 /* main.m in Sources */,
+				099ACABC1A22846A00F568C0 /* Classification.m in Sources */,
 				092332821A225DDC00BF80FB /* AdoptingAnAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

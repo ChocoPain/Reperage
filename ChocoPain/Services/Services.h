@@ -14,4 +14,9 @@
 
 - (void) loginWithUserName:(NSString *) string andPassword:(NSString*) password withHandler:(void (^)(BOOL result, NSError *error))completionBlock;
 
+
+#pragma mark - Listing
+
+- (NSArray*) getClassifications;
+
 @end
