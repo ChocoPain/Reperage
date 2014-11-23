@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092332821A225DDC00BF80FB /* AdoptingAnAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 092332811A225DDC00BF80FB /* AdoptingAnAnnotation.m */; };
 		095187E61A22346000193100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187E51A22346000193100 /* main.m */; };
 		095187E91A22346000193100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187E81A22346000193100 /* AppDelegate.m */; };
 		095187EC1A22346000193100 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187EB1A22346000193100 /* LoginViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092332801A225DDC00BF80FB /* AdoptingAnAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdoptingAnAnnotation.h; sourceTree = "<group>"; };
+		092332811A225DDC00BF80FB /* AdoptingAnAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdoptingAnAnnotation.m; sourceTree = "<group>"; };
 		095187E01A22346000193100 /* ChocoPain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChocoPain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		095187E41A22346000193100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095187E51A22346000193100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				095187F21A22346000193100 /* LaunchScreen.xib */,
 				0951880D1A22500B00193100 /* MapViewController.h */,
 				0951880E1A22500B00193100 /* MapViewController.m */,
+				092332801A225DDC00BF80FB /* AdoptingAnAnnotation.h */,
+				092332811A225DDC00BF80FB /* AdoptingAnAnnotation.m */,
 				095188121A22541300193100 /* Frameworks */,
 				095187E31A22346000193100 /* Supporting Files */,
 			);
@@ -254,6 +259,7 @@
 				0951880F1A22500B00193100 /* MapViewController.m in Sources */,
 				095187E91A22346000193100 /* AppDelegate.m in Sources */,
 				095187E61A22346000193100 /* main.m in Sources */,
+				092332821A225DDC00BF80FB /* AdoptingAnAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

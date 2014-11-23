@@ -8,9 +8,11 @@
 
 #import "MapViewController.h"
 
+#import "AdoptingAnAnnotation.h"
+
 #import <MapKit/MapKit.h>
 
-@interface MapViewController () <MKMapViewDelegate, MKAnnotation>
+@interface MapViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
@@ -22,6 +24,7 @@
     // Do any additional setup after loading the view.
     
     NSLog(@"Bonjour : %@", self.name);
+    [self.mapView setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,10 +61,49 @@
     CLLocationCoordinate2D touchMapCoordinate =
     [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     
-    MKAnnotationView *annot = [[MKAnnotationView alloc] init];
-    //annot.coordinate = touchMapCoordinate;
+    AdoptingAnAnnotation *annot = [[AdoptingAnAnnotation alloc] initWithCoordinate:touchMapCoordinate];
+    [self.mapView removeAnnotations:self.mapView.annotations];
     [self.mapView addAnnotation:annot];
 }
+
+- (MKAnnotationView *) mapView:(MKMapView *) mapView viewForAnnotation:(id ) annotation {
+    MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+    customPinView.pinColor = MKPinAnnotationColorPurple;
+    customPinView.animatesDrop = YES;
+    customPinView.canShowCallout = YES;
+    return customPinView;
+}
+
+
+
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+//{
+//    MKPinAnnotationView *pinView = nil;
+//    
+//    static NSString *defaultPinID = @"identifier";
+//    pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+//    if ( pinView == nil )
+//    {
+//        NSLog(@"Inside IF");
+//        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:defaultPinID];
+//        
+//        pinView.pinColor = MKPinAnnotationColorRed;  //or Green or Purple
+//        
+//        pinView.enabled = YES;
+//        pinView.canShowCallout = YES;
+//        
+//        UIButton *btn = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        
+//        //Accessoryview for the annotation view in ios.
+//        pinView.rightCalloutAccessoryView = btn;
+//    }
+//    else
+//    {
+//        pinView.annotation = annotation;
+//    }
+//    
+//    return pinView;
+//}
 
 /*
 #pragma mark - Navigation
