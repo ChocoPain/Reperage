@@ -18,6 +18,7 @@
 		0951880C1A223F7800193100 /* Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951880B1A223F7800193100 /* Services.m */; };
 		0951880F1A22500B00193100 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951880E1A22500B00193100 /* MapViewController.m */; };
 		095188111A22540500193100 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095188101A22540500193100 /* MapKit.framework */; };
+		099ACAB91A227D9500F568C0 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAB81A227D9500F568C0 /* launch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +34,7 @@
 /* Begin PBXFileReference section */
 		092332801A225DDC00BF80FB /* AdoptingAnAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdoptingAnAnnotation.h; sourceTree = "<group>"; };
 		092332811A225DDC00BF80FB /* AdoptingAnAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdoptingAnAnnotation.m; sourceTree = "<group>"; };
-		095187E01A22346000193100 /* ChocoPain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChocoPain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		095187E01A22346000193100 /* Repérage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repérage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		095187E41A22346000193100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095187E51A22346000193100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		095187E71A22346000193100 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		0951880D1A22500B00193100 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		0951880E1A22500B00193100 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		095188101A22540500193100 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		099ACAB81A227D9500F568C0 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,7 @@
 		095187E11A22346000193100 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				095187E01A22346000193100 /* ChocoPain.app */,
+				095187E01A22346000193100 /* Repérage.app */,
 				095187F91A22346000193100 /* ChocoPainTests.xctest */,
 			);
 			name = Products;
@@ -93,6 +95,7 @@
 		095187E21A22346000193100 /* ChocoPain */ = {
 			isa = PBXGroup;
 			children = (
+				099ACAB71A227D8400F568C0 /* Images */,
 				095188091A223F4700193100 /* Services */,
 				095187E71A22346000193100 /* AppDelegate.h */,
 				095187E81A22346000193100 /* AppDelegate.m */,
@@ -154,12 +157,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		099ACAB71A227D8400F568C0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				099ACAB81A227D9500F568C0 /* launch.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		095187DF1A22346000193100 /* ChocoPain */ = {
+		095187DF1A22346000193100 /* Repérage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 095188031A22346000193100 /* Build configuration list for PBXNativeTarget "ChocoPain" */;
+			buildConfigurationList = 095188031A22346000193100 /* Build configuration list for PBXNativeTarget "Repérage" */;
 			buildPhases = (
 				095187DC1A22346000193100 /* Sources */,
 				095187DD1A22346000193100 /* Frameworks */,
@@ -169,9 +180,9 @@
 			);
 			dependencies = (
 			);
-			name = ChocoPain;
+			name = "Repérage";
 			productName = ChocoPain;
-			productReference = 095187E01A22346000193100 /* ChocoPain.app */;
+			productReference = 095187E01A22346000193100 /* Repérage.app */;
 			productType = "com.apple.product-type.application";
 		};
 		095187F81A22346000193100 /* ChocoPainTests */ = {
@@ -203,6 +214,7 @@
 				TargetAttributes = {
 					095187DF1A22346000193100 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = R6TPU48UH8;
 					};
 					095187F81A22346000193100 = {
 						CreatedOnToolsVersion = 6.1;
@@ -223,7 +235,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				095187DF1A22346000193100 /* ChocoPain */,
+				095187DF1A22346000193100 /* Repérage */,
 				095187F81A22346000193100 /* ChocoPainTests */,
 			);
 		};
@@ -234,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099ACAB91A227D9500F568C0 /* launch.png in Resources */,
 				095187EF1A22346000193100 /* Main.storyboard in Resources */,
 				095187F41A22346000193100 /* LaunchScreen.xib in Resources */,
 				095187F11A22346000193100 /* Images.xcassets in Resources */,
@@ -276,7 +289,7 @@
 /* Begin PBXTargetDependency section */
 		095187FB1A22346000193100 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 095187DF1A22346000193100 /* ChocoPain */;
+			target = 095187DF1A22346000193100 /* Repérage */;
 			targetProxy = 095187FA1A22346000193100 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -318,7 +331,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -359,7 +371,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -372,6 +384,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "A9A688AE-087E-45BF-BCB3-CFCE9EA615E7";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -381,9 +394,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChocoPain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -391,9 +407,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChocoPain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -443,7 +462,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		095188031A22346000193100 /* Build configuration list for PBXNativeTarget "ChocoPain" */ = {
+		095188031A22346000193100 /* Build configuration list for PBXNativeTarget "Repérage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				095188041A22346000193100 /* Debug */,

@@ -70,9 +70,10 @@
     MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
     customPinView.pinColor = MKPinAnnotationColorPurple;
     customPinView.animatesDrop = YES;
-    customPinView.canShowCallout = YES;
+    customPinView.canShowCallout = NO;
     return customPinView;
 }
+
 
 
 
