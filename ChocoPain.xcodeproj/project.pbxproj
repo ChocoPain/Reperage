@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		095187E61A22346000193100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187E51A22346000193100 /* main.m */; };
+		095187E91A22346000193100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187E81A22346000193100 /* AppDelegate.m */; };
+		095187EC1A22346000193100 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187EB1A22346000193100 /* LoginViewController.m */; };
+		095187EF1A22346000193100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095187ED1A22346000193100 /* Main.storyboard */; };
+		095187F11A22346000193100 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095187F01A22346000193100 /* Images.xcassets */; };
+		095187F41A22346000193100 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095187F21A22346000193100 /* LaunchScreen.xib */; };
+		095188001A22346000193100 /* ChocoPainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187FF1A22346000193100 /* ChocoPainTests.m */; };
+		0951880C1A223F7800193100 /* Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951880B1A223F7800193100 /* Services.m */; };
+		0951880F1A22500B00193100 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0951880E1A22500B00193100 /* MapViewController.m */; };
+		095188111A22540500193100 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095188101A22540500193100 /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		095187FA1A22346000193100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095187D81A22346000193100 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 095187DF1A22346000193100;
+			remoteInfo = ChocoPain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		095187E01A22346000193100 /* ChocoPain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChocoPain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		095187E41A22346000193100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		095187E51A22346000193100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		095187E71A22346000193100 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		095187E81A22346000193100 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		095187EA1A22346000193100 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		095187EB1A22346000193100 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		095187EE1A22346000193100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		095187F01A22346000193100 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		095187F31A22346000193100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		095187F91A22346000193100 /* ChocoPainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChocoPainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		095187FE1A22346000193100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		095187FF1A22346000193100 /* ChocoPainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChocoPainTests.m; sourceTree = "<group>"; };
+		0951880A1A223F7800193100 /* Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Services.h; path = Services/Services.h; sourceTree = "<group>"; };
+		0951880B1A223F7800193100 /* Services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Services.m; path = Services/Services.m; sourceTree = "<group>"; };
+		0951880D1A22500B00193100 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		0951880E1A22500B00193100 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		095188101A22540500193100 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		095187DD1A22346000193100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095188111A22540500193100 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095187F61A22346000193100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		095187D71A22346000193100 = {
+			isa = PBXGroup;
+			children = (
+				095187E21A22346000193100 /* ChocoPain */,
+				095187FC1A22346000193100 /* ChocoPainTests */,
+				095187E11A22346000193100 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		095187E11A22346000193100 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				095187E01A22346000193100 /* ChocoPain.app */,
+				095187F91A22346000193100 /* ChocoPainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		095187E21A22346000193100 /* ChocoPain */ = {
+			isa = PBXGroup;
+			children = (
+				095188091A223F4700193100 /* Services */,
+				095187E71A22346000193100 /* AppDelegate.h */,
+				095187E81A22346000193100 /* AppDelegate.m */,
+				095187EA1A22346000193100 /* LoginViewController.h */,
+				095187EB1A22346000193100 /* LoginViewController.m */,
+				095187ED1A22346000193100 /* Main.storyboard */,
+				095187F01A22346000193100 /* Images.xcassets */,
+				095187F21A22346000193100 /* LaunchScreen.xib */,
+				0951880D1A22500B00193100 /* MapViewController.h */,
+				0951880E1A22500B00193100 /* MapViewController.m */,
+				095188121A22541300193100 /* Frameworks */,
+				095187E31A22346000193100 /* Supporting Files */,
+			);
+			path = ChocoPain;
+			sourceTree = "<group>";
+		};
+		095187E31A22346000193100 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				095187E41A22346000193100 /* Info.plist */,
+				095187E51A22346000193100 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		095187FC1A22346000193100 /* ChocoPainTests */ = {
+			isa = PBXGroup;
+			children = (
+				095187FF1A22346000193100 /* ChocoPainTests.m */,
+				095187FD1A22346000193100 /* Supporting Files */,
+			);
+			path = ChocoPainTests;
+			sourceTree = "<group>";
+		};
+		095187FD1A22346000193100 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				095187FE1A22346000193100 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		095188091A223F4700193100 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0951880A1A223F7800193100 /* Services.h */,
+				0951880B1A223F7800193100 /* Services.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		095188121A22541300193100 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				095188101A22540500193100 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		095187DF1A22346000193100 /* ChocoPain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 095188031A22346000193100 /* Build configuration list for PBXNativeTarget "ChocoPain" */;
+			buildPhases = (
+				095187DC1A22346000193100 /* Sources */,
+				095187DD1A22346000193100 /* Frameworks */,
+				095187DE1A22346000193100 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChocoPain;
+			productName = ChocoPain;
+			productReference = 095187E01A22346000193100 /* ChocoPain.app */;
+			productType = "com.apple.product-type.application";
+		};
+		095187F81A22346000193100 /* ChocoPainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 095188061A22346000193100 /* Build configuration list for PBXNativeTarget "ChocoPainTests" */;
+			buildPhases = (
+				095187F51A22346000193100 /* Sources */,
+				095187F61A22346000193100 /* Frameworks */,
+				095187F71A22346000193100 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				095187FB1A22346000193100 /* PBXTargetDependency */,
+			);
+			name = ChocoPainTests;
+			productName = ChocoPainTests;
+			productReference = 095187F91A22346000193100 /* ChocoPainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		095187D81A22346000193100 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Hervé";
+				TargetAttributes = {
+					095187DF1A22346000193100 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					095187F81A22346000193100 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 095187DF1A22346000193100;
+					};
+				};
+			};
+			buildConfigurationList = 095187DB1A22346000193100 /* Build configuration list for PBXProject "ChocoPain" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 095187D71A22346000193100;
+			productRefGroup = 095187E11A22346000193100 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				095187DF1A22346000193100 /* ChocoPain */,
+				095187F81A22346000193100 /* ChocoPainTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		095187DE1A22346000193100 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095187EF1A22346000193100 /* Main.storyboard in Resources */,
+				095187F41A22346000193100 /* LaunchScreen.xib in Resources */,
+				095187F11A22346000193100 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095187F71A22346000193100 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		095187DC1A22346000193100 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095187EC1A22346000193100 /* LoginViewController.m in Sources */,
+				0951880C1A223F7800193100 /* Services.m in Sources */,
+				0951880F1A22500B00193100 /* MapViewController.m in Sources */,
+				095187E91A22346000193100 /* AppDelegate.m in Sources */,
+				095187E61A22346000193100 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095187F51A22346000193100 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095188001A22346000193100 /* ChocoPainTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		095187FB1A22346000193100 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 095187DF1A22346000193100 /* ChocoPain */;
+			targetProxy = 095187FA1A22346000193100 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		095187ED1A22346000193100 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				095187EE1A22346000193100 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		095187F21A22346000193100 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				095187F31A22346000193100 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		095188011A22346000193100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		095188021A22346000193100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		095188041A22346000193100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChocoPain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		095188051A22346000193100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChocoPain/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		095188071A22346000193100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChocoPainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChocoPain.app/ChocoPain";
+			};
+			name = Debug;
+		};
+		095188081A22346000193100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChocoPainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChocoPain.app/ChocoPain";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		095187DB1A22346000193100 /* Build configuration list for PBXProject "ChocoPain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095188011A22346000193100 /* Debug */,
+				095188021A22346000193100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		095188031A22346000193100 /* Build configuration list for PBXNativeTarget "ChocoPain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095188041A22346000193100 /* Debug */,
+				095188051A22346000193100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		095188061A22346000193100 /* Build configuration list for PBXNativeTarget "ChocoPainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095188071A22346000193100 /* Debug */,
+				095188081A22346000193100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 095187D81A22346000193100 /* Project object */;
+}
