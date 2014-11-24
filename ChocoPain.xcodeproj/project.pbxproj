@@ -38,6 +38,10 @@
 		099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099ACADE1A22B2C100F568C0 /* Antonio-Light.ttf */; };
 		099ACAE21A22B2C100F568C0 /* Antonio-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099ACADF1A22B2C100F568C0 /* Antonio-Regular.ttf */; };
 		099ACAE31A22B2C100F568C0 /* Antonio-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAE01A22B2C100F568C0 /* Antonio-Bold.ttf */; };
+		099ACAE91A230F8F00F568C0 /* StartUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACAE81A230F8F00F568C0 /* StartUpViewController.m */; };
+		099ACAED1A23130000F568C0 /* buttonHeartRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAEA1A23130000F568C0 /* buttonHeartRed.png */; };
+		099ACAEE1A23130000F568C0 /* buttonHeartBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAEB1A23130000F568C0 /* buttonHeartBlack.png */; };
+		099ACAEF1A23130000F568C0 /* buttonHeartWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAEC1A23130000F568C0 /* buttonHeartWhite.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +97,11 @@
 		099ACADE1A22B2C100F568C0 /* Antonio-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Light.ttf"; sourceTree = "<group>"; };
 		099ACADF1A22B2C100F568C0 /* Antonio-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Regular.ttf"; sourceTree = "<group>"; };
 		099ACAE01A22B2C100F568C0 /* Antonio-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Bold.ttf"; sourceTree = "<group>"; };
+		099ACAE71A230F8F00F568C0 /* StartUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUpViewController.h; sourceTree = "<group>"; };
+		099ACAE81A230F8F00F568C0 /* StartUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpViewController.m; sourceTree = "<group>"; };
+		099ACAEA1A23130000F568C0 /* buttonHeartRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonHeartRed.png; sourceTree = "<group>"; };
+		099ACAEB1A23130000F568C0 /* buttonHeartBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonHeartBlack.png; sourceTree = "<group>"; };
+		099ACAEC1A23130000F568C0 /* buttonHeartWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonHeartWhite.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +148,8 @@
 				095188091A223F4700193100 /* Services */,
 				095187E71A22346000193100 /* AppDelegate.h */,
 				095187E81A22346000193100 /* AppDelegate.m */,
+				099ACAE71A230F8F00F568C0 /* StartUpViewController.h */,
+				099ACAE81A230F8F00F568C0 /* StartUpViewController.m */,
 				095187EA1A22346000193100 /* LoginViewController.h */,
 				095187EB1A22346000193100 /* LoginViewController.m */,
 				095187ED1A22346000193100 /* Main.storyboard */,
@@ -219,6 +230,9 @@
 		099ACACA1A22AC4B00F568C0 /* DecorList */ = {
 			isa = PBXGroup;
 			children = (
+				099ACAEA1A23130000F568C0 /* buttonHeartRed.png */,
+				099ACAEB1A23130000F568C0 /* buttonHeartBlack.png */,
+				099ACAEC1A23130000F568C0 /* buttonHeartWhite.png */,
 				099ACACB1A22AC5D00F568C0 /* buttonExit.png */,
 				099ACACC1A22AC5D00F568C0 /* buttonExitPushed.png */,
 				099ACACD1A22AC5D00F568C0 /* BOUTON LIKE 1.png */,
@@ -328,6 +342,7 @@
 				099ACAE21A22B2C100F568C0 /* Antonio-Regular.ttf in Resources */,
 				099ACAD41A22AC5D00F568C0 /* buttonExit.png in Resources */,
 				099ACADB1A22AC5D00F568C0 /* BOUTON PLAN PUSH.png in Resources */,
+				099ACAEE1A23130000F568C0 /* buttonHeartBlack.png in Resources */,
 				099ACAB91A227D9500F568C0 /* launch.png in Resources */,
 				099ACAC91A229CFA00F568C0 /* loginScreen.png in Resources */,
 				095187EF1A22346000193100 /* Main.storyboard in Resources */,
@@ -338,11 +353,13 @@
 				099ACAE31A22B2C100F568C0 /* Antonio-Bold.ttf in Resources */,
 				099ACADC1A22AC5D00F568C0 /* degradePhoto.png in Resources */,
 				099ACAC61A229CFA00F568C0 /* facebookButtonPushed.png in Resources */,
+				099ACAEF1A23130000F568C0 /* buttonHeartWhite.png in Resources */,
 				099ACADA1A22AC5D00F568C0 /* BOUTON PLAN BLANC.png in Resources */,
 				099ACAD51A22AC5D00F568C0 /* buttonExitPushed.png in Resources */,
 				099ACAC51A229CFA00F568C0 /* reaButtonPushed.png in Resources */,
 				099ACAC81A229CFA00F568C0 /* reaButton.png in Resources */,
 				099ACAD71A22AC5D00F568C0 /* BOUTON LIKE PUSH.png in Resources */,
+				099ACAED1A23130000F568C0 /* buttonHeartRed.png in Resources */,
 				095187F11A22346000193100 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +380,7 @@
 			files = (
 				095187EC1A22346000193100 /* LoginViewController.m in Sources */,
 				0951880C1A223F7800193100 /* Services.m in Sources */,
+				099ACAE91A230F8F00F568C0 /* StartUpViewController.m in Sources */,
 				0951880F1A22500B00193100 /* MapViewController.m in Sources */,
 				095187E91A22346000193100 /* AppDelegate.m in Sources */,
 				099ACABF1A228D8100F568C0 /* DecorListViewController.m in Sources */,

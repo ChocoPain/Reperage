@@ -10,6 +10,7 @@
 #import "Services.h"
 
 @interface DecorListViewController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -86,9 +87,34 @@
     
     // Configure Cell
     UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
-    [label setText:[NSString stringWithFormat:@"Row %i in Section %i", [indexPath row], [indexPath section]]];
+    [label setText:[NSString stringWithFormat:@"Cat - Name"]];
+
+    
+    UIButton *heart = (UIButton *)[cell.contentView viewWithTag:2];
+    [heart addTarget:self action:@selector(favoriteButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    if(indexPath.row == 0)
+    {
+        [heart setBackgroundImage:[UIImage imageNamed:@"buttonHeartRed.png"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [heart setBackgroundImage:[UIImage imageNamed:@"buttonHeartBlack.png"] forState:UIControlStateNormal];
+    }
+
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"toDetail" sender:indexPath];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"toDetail"]) {
+        NSLog(@"row : %i", ((NSIndexPath*) sender).row);
+    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -100,6 +126,13 @@
     {
         [self.navigationController popViewControllerAnimated:YES];
     }
+}
+
+- (void) favoriteButtonPressed:(id)sender
+{
+    UITableViewCell *clickedCell =  (UITableViewCell*) [[sender superview] superview];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:clickedCell];
+    NSLog(@"Click : %i", indexPath.row);
 }
 
 /*

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Oh-ey-0zc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jqq-4o-gLD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Antonio-Regular.ttf">
+            <string>Antonio-Regular</string>
             <string>Antonio-Regular</string>
         </mutableArray>
     </customFonts>
@@ -135,9 +136,19 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwa-Gz-zNz">
-                                                    <rect key="frame" x="290" y="8" width="77" height="52"/>
-                                                </imageView>
+                                                <button opaque="NO" tag="2" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwu-Jx-jte">
+                                                    <rect key="frame" x="294" y="8" width="73" height="56"/>
+                                                    <fontDescription key="fontDescription" name="Antonio-Regular" family="Antonio" pointSize="15"/>
+                                                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="1" backgroundImage="buttonHeartBlack.png">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="buttonHeartWhite.png">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="buttonHeartWhite.png"/>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -150,10 +161,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="iDi-Hk-zLi" id="7Ub-tM-c57"/>
+                        <segue destination="L5g-Ay-5f1" kind="show" identifier="toDetail" id="Utc-dB-iSr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDJ-Gq-FEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1352.5" y="92.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LKA-Vv-bpg">
+            <objects>
+                <viewController id="L5g-Ay-5f1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k8Z-jm-LbU"/>
+                        <viewControllerLayoutGuide type="bottom" id="E1I-P8-Cjm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n0A-U6-XDh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0E-t1-62z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="31"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="swF-iq-4uV">
@@ -179,6 +212,23 @@
             </objects>
             <point key="canvasLocation" x="1899" y="505"/>
         </scene>
+        <!--Start Up View Controller-->
+        <scene sceneID="g3j-1z-zvc">
+            <objects>
+                <viewController id="Jqq-4o-gLD" customClass="StartUpViewController" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch.png" id="E0e-oX-KPY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="4Oh-ey-0zc" kind="presentation" identifier="toLogin" modalTransitionStyle="crossDissolve" id="RxU-dv-JvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Yj-zI-FkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168.5" y="-303.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3cT-kK-qU9">
             <objects>
@@ -200,9 +250,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buttonHeartBlack.png" width="180" height="155"/>
+        <image name="buttonHeartWhite.png" width="180" height="155"/>
         <image name="degradePhoto.png" width="1500" height="763"/>
         <image name="facebookButton.png" width="647" height="210"/>
         <image name="facebookButtonPushed.png" width="647" height="210"/>
+        <image name="launch.png" width="1500" height="2668"/>
         <image name="loginScreen.png" width="1500" height="2686"/>
         <image name="reaButton.png" width="647" height="210"/>
         <image name="reaButtonPushed.png" width="647" height="210"/>
