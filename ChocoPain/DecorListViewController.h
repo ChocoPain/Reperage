@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DecorListViewController : UIViewController
-
+@property (nonatomic) BOOL back;
 @end

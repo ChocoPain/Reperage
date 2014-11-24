@@ -178,6 +178,7 @@
     {
         DecorListViewController *vc = [segue destinationViewController];
         vc.editing = NO;
+        vc.back = YES;
     }
     else if ([[segue identifier] isEqualToString:@"toMyProjects"])
     {

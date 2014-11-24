@@ -313,10 +313,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Lh-1c-fS7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="604"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n0A-U6-XDh">
-                                        <rect key="frame" x="-1" y="-63" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jH-fD-Wxd">
                                                 <rect key="frame" x="0.0" y="64" width="381" height="138"/>
@@ -326,7 +326,7 @@
                                                 </constraints>
                                             </scrollView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="BARRETAG.png" translatesAutoresizingMaskIntoConstraints="NO" id="4jv-i5-4Vx">
-                                                <rect key="frame" x="49" y="210" width="310" height="38"/>
+                                                <rect key="frame" x="36" y="210" width="323" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="Q7R-sH-G37"/>
                                                     <constraint firstAttribute="width" constant="310" id="ok2-7q-UQP"/>
@@ -428,7 +428,7 @@
                                                     <action selector="alreadyUsedClicked:" destination="L5g-Ay-5f1" eventType="touchUpInside" id="FJP-Ql-3U4"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="g" minimumFontSize="17" background="RECHERCHELIEUTOURNAGE.png" translatesAutoresizingMaskIntoConstraints="NO" id="sBa-Jk-AkA">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="RECHERCHELIEUTOURNAGE.png" translatesAutoresizingMaskIntoConstraints="NO" id="sBa-Jk-AkA">
                                                 <rect key="frame" x="13" y="504" width="346" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="346" id="DCr-h0-oxn"/>
@@ -442,6 +442,56 @@
                                                     <outlet property="delegate" destination="L5g-Ay-5f1" id="mqR-ZM-ee6"/>
                                                 </connections>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4a-pB-fOn">
+                                                <rect key="frame" x="30" y="552" width="57" height="57"/>
+                                                <state key="normal" image="FACEBOOK.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted" image="FACEBOOKPUSH.png"/>
+                                                <connections>
+                                                    <action selector="facebookButtonPressed:" destination="DGT-y8-N0m" eventType="touchUpInside" id="5hJ-GV-jsc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5m9-CK-luv">
+                                                <rect key="frame" x="97" y="552" width="57" height="57"/>
+                                                <state key="normal" image="TWITTER.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted" image="TWITTERPUSH.png"/>
+                                                <connections>
+                                                    <action selector="twitterButtonPressed:" destination="DGT-y8-N0m" eventType="touchUpInside" id="iCq-Ou-Y6p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3e-el-W1l">
+                                                <rect key="frame" x="162" y="552" width="57" height="57"/>
+                                                <state key="normal" image="PINTEREST.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted" image="PINTERESTPUSH.png"/>
+                                                <connections>
+                                                    <action selector="twitterButtonPressed:" destination="DGT-y8-N0m" eventType="touchUpInside" id="dCt-Q0-GZJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvQ-wh-FNZ">
+                                                <rect key="frame" x="231" y="552" width="57" height="57"/>
+                                                <state key="normal" image="INSTAGRAM.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted" image="INSTAGRAMPUSH.png"/>
+                                                <connections>
+                                                    <action selector="twitterButtonPressed:" destination="DGT-y8-N0m" eventType="touchUpInside" id="vUf-dB-D5S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIs-1h-DWL">
+                                                <rect key="frame" x="296" y="552" width="57" height="57"/>
+                                                <state key="normal" image="FLICKR.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted" image="FLICKRPUSH.png"/>
+                                                <connections>
+                                                    <action selector="twitterButtonPressed:" destination="DGT-y8-N0m" eventType="touchUpInside" id="iBz-Gd-VXQ"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -464,7 +514,7 @@
                                             <constraint firstItem="mCq-JX-ZiI" firstAttribute="width" secondItem="mCq-JX-ZiI" secondAttribute="height" multiplier="1:1" id="GAX-lc-BJa"/>
                                             <constraint firstItem="D1d-UF-JWA" firstAttribute="leading" secondItem="n0A-U6-XDh" secondAttribute="leadingMargin" constant="22" id="GBN-kb-545"/>
                                             <constraint firstItem="sBa-Jk-AkA" firstAttribute="top" secondItem="DsU-ma-RGt" secondAttribute="bottom" constant="8" symbolic="YES" id="Ghf-Zs-MYv"/>
-                                            <constraint firstAttribute="bottom" secondItem="D1d-UF-JWA" secondAttribute="bottom" constant="205" id="J90-I4-TTV"/>
+                                            <constraint firstAttribute="bottom" secondItem="D1d-UF-JWA" secondAttribute="bottom" constant="206" id="J90-I4-TTV"/>
                                             <constraint firstItem="D1d-UF-JWA" firstAttribute="leading" secondItem="3e8-6L-k9o" secondAttribute="trailing" constant="8" id="JSE-aJ-LlN"/>
                                             <constraint firstItem="DsU-ma-RGt" firstAttribute="centerX" secondItem="D1d-UF-JWA" secondAttribute="centerX" id="JeX-Rd-fHK"/>
                                             <constraint firstItem="D1d-UF-JWA" firstAttribute="trailing" secondItem="DsU-ma-RGt" secondAttribute="trailing" id="Kdl-Va-Jyw"/>
@@ -477,7 +527,7 @@
                                             <constraint firstItem="sBa-Jk-AkA" firstAttribute="top" secondItem="DsU-ma-RGt" secondAttribute="bottom" constant="8" id="RNB-jK-HLS"/>
                                             <constraint firstItem="DsU-ma-RGt" firstAttribute="leading" secondItem="mCy-UQ-J8a" secondAttribute="trailing" constant="8" symbolic="YES" id="STk-UQ-zy7"/>
                                             <constraint firstItem="sBa-Jk-AkA" firstAttribute="leading" secondItem="Cky-di-4JE" secondAttribute="leading" id="SfR-hp-i6U"/>
-                                            <constraint firstAttribute="bottom" secondItem="sBa-Jk-AkA" secondAttribute="bottom" constant="133" id="UpZ-Jd-P4M"/>
+                                            <constraint firstAttribute="bottom" secondItem="sBa-Jk-AkA" secondAttribute="bottom" constant="134" id="UpZ-Jd-P4M"/>
                                             <constraint firstItem="sBa-Jk-AkA" firstAttribute="leading" secondItem="3e8-6L-k9o" secondAttribute="leading" id="WX6-qC-DQ3"/>
                                             <constraint firstItem="DsU-ma-RGt" firstAttribute="leading" secondItem="n0A-U6-XDh" secondAttribute="leading" constant="30" id="YRE-iK-yNi"/>
                                             <constraint firstItem="D1d-UF-JWA" firstAttribute="leading" secondItem="3e8-6L-k9o" secondAttribute="trailing" constant="8" symbolic="YES" id="anX-ZU-2sk"/>
@@ -487,7 +537,7 @@
                                             <constraint firstItem="sBa-Jk-AkA" firstAttribute="leading" secondItem="n0A-U6-XDh" secondAttribute="leading" constant="13" id="hOL-zP-Im3"/>
                                             <constraint firstItem="mCq-JX-ZiI" firstAttribute="leading" secondItem="DsU-ma-RGt" secondAttribute="trailing" constant="22" id="hxI-LB-jfs"/>
                                             <constraint firstItem="DsU-ma-RGt" firstAttribute="top" secondItem="n0A-U6-XDh" secondAttribute="top" constant="475" id="lpA-wN-zSa"/>
-                                            <constraint firstAttribute="bottom" secondItem="DsU-ma-RGt" secondAttribute="bottom" constant="171" id="lsM-HN-mke"/>
+                                            <constraint firstAttribute="bottom" secondItem="DsU-ma-RGt" secondAttribute="bottom" constant="172" id="lsM-HN-mke"/>
                                             <constraint firstItem="mCq-JX-ZiI" firstAttribute="top" secondItem="158-jO-pDm" secondAttribute="bottom" constant="8" id="m9b-qo-ZqP"/>
                                             <constraint firstItem="D1d-UF-JWA" firstAttribute="bottom" secondItem="158-jO-pDm" secondAttribute="bottom" id="nOD-b5-moi"/>
                                             <constraint firstItem="sBa-Jk-AkA" firstAttribute="top" secondItem="n0A-U6-XDh" secondAttribute="top" constant="504" id="o8F-as-nqa"/>
@@ -818,12 +868,18 @@
         <image name="CLASSIFICATION.png" width="1501" height="277"/>
         <image name="FACEBOOK.png" width="203" height="203"/>
         <image name="FACEBOOKPUSH.png" width="203" height="203"/>
+        <image name="FLICKR.png" width="204" height="203"/>
+        <image name="FLICKRPUSH.png" width="204" height="203"/>
+        <image name="INSTAGRAM.png" width="203" height="203"/>
+        <image name="INSTAGRAMPUSH.png" width="203" height="203"/>
         <image name="LOCALISATION.png" width="1501" height="277"/>
         <image name="OKBUTTON.png" width="123" height="135"/>
         <image name="PAGEDEMANDE.png" width="1507" height="2406"/>
         <image name="PAGEPROJET.png" width="1507" height="2406"/>
         <image name="PAGERECHERCHE.png" width="1507" height="2406"/>
         <image name="PAGESECTIONS.png" width="1508" height="2406"/>
+        <image name="PINTEREST.png" width="203" height="203"/>
+        <image name="PINTERESTPUSH.png" width="203" height="203"/>
         <image name="RECHERCHELIEUTOURNAGE.png" width="1365" height="111"/>
         <image name="TWITTER.png" width="203" height="203"/>
         <image name="TWITTERPUSH.png" width="203" height="203"/>

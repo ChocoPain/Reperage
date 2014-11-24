@@ -95,11 +95,10 @@
     if ([[segue identifier] isEqualToString:@"toDecorList"]) {
         
         // Get destination view
-        //DecorListViewController *vc = [segue destinationViewController];
-        
+        DecorListViewController *vc = [segue destinationViewController];
+        vc.back = NO;
     }
-    
-    if ([[segue identifier] isEqualToString:@"toSections"])
+    else if ([[segue identifier] isEqualToString:@"toSections"])
     {
         FakeDemoViewController *vc = [segue destinationViewController];
         vc.type = 1;

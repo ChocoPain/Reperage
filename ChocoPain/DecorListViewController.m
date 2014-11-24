@@ -33,16 +33,32 @@
 {
     [super viewWillAppear:animated];
     
-    UIButton *buttonL = [UIButton buttonWithType:UIButtonTypeCustom];
-    buttonL.frame = CGRectMake(0, 0, 22, 22);
-    //button.backgroundColor = [UIColor redColor];
-    [buttonL setImage:[UIImage imageNamed:@"buttonExit.png"] forState:UIControlStateNormal];
-    [buttonL setImage:[UIImage imageNamed:@"buttonExitPushed.png"] forState:UIControlStateHighlighted];
-    [buttonL addTarget:self action:@selector(exit:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *barButtonL=[[UIBarButtonItem alloc] init];
-    [barButtonL setCustomView:buttonL];
-    self.navigationItem.leftBarButtonItem=barButtonL;
+    if(self.back == NO)
+    {
+        UIButton *buttonL = [UIButton buttonWithType:UIButtonTypeCustom];
+        buttonL.frame = CGRectMake(0, 0, 22, 22);
+        //button.backgroundColor = [UIColor redColor];
+        [buttonL setImage:[UIImage imageNamed:@"buttonExit.png"] forState:UIControlStateNormal];
+        [buttonL setImage:[UIImage imageNamed:@"buttonExitPushed.png"] forState:UIControlStateHighlighted];
+        [buttonL addTarget:self action:@selector(exit:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *barButtonL=[[UIBarButtonItem alloc] init];
+        [barButtonL setCustomView:buttonL];
+        self.navigationItem.leftBarButtonItem=barButtonL;
+    }
+    else
+    {
+        UIButton *buttonL = [UIButton buttonWithType:UIButtonTypeCustom];
+        buttonL.frame = CGRectMake(0, 0, 16, 23);
+        //button.backgroundColor = [UIColor redColor];
+        [buttonL setImage:[UIImage imageNamed:@"BACKBUTTON.png"] forState:UIControlStateNormal];
+        [buttonL setImage:[UIImage imageNamed:@"BACKBUTTONPUSH.png"] forState:UIControlStateHighlighted];
+        [buttonL addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *barButtonL=[[UIBarButtonItem alloc] init];
+        [barButtonL setCustomView:buttonL];
+        self.navigationItem.leftBarButtonItem=barButtonL;
+    }
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0, 0, 12, 24);
@@ -71,6 +87,11 @@
 {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Etes-vous sûr de vouloir vous déconnecter ?" delegate:self cancelButtonTitle:@"Annuler" destructiveButtonTitle:@"Oui" otherButtonTitles:nil];
     [actionSheet showInView:self.view];
+}
+
+- (void) back:(id) sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) addDecor:(id) sender
@@ -137,6 +158,7 @@
         
         DetailDecorViewController *vc = [segue destinationViewController];
         vc.lieu =[self.liste objectAtIndex:((NSIndexPath*) sender).row];
+        
     }
 }
 
