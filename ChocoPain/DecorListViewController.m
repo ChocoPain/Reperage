@@ -8,9 +8,11 @@
 
 #import "DecorListViewController.h"
 #import "Services.h"
+#import "LieuDeTournage.h"
 
 @interface DecorListViewController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray* liste;
 
 @end
 
@@ -25,22 +27,22 @@
     //button.backgroundColor = [UIColor redColor];
     [buttonL setImage:[UIImage imageNamed:@"buttonExit.png"] forState:UIControlStateNormal];
     [buttonL setImage:[UIImage imageNamed:@"buttonExitPushed.png"] forState:UIControlStateHighlighted];
-    [buttonL addTarget:self action:@selector(addDecor:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonL addTarget:self action:@selector(exit:) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *barButtonL=[[UIBarButtonItem alloc] init];
     [barButtonL setCustomView:buttonL];
     self.navigationItem.leftBarButtonItem=barButtonL;
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 0, 22, 22);
+    button.frame = CGRectMake(0, 0, 12, 24);
     //button.backgroundColor = [UIColor redColor];
-    [button setImage:[UIImage imageNamed:@"buttonExit.png"] forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"buttonExitPushed.png"] forState:UIControlStateHighlighted];
-    [button addTarget:self action:@selector(exit:) forControlEvents:UIControlEventTouchUpInside];
+    [button setImage:[UIImage imageNamed:@"buttonMap.png"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"buttonMapPushed.png"] forState:UIControlStateHighlighted];
+    //[button addTarget:self action:@selector(exit:) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *barButton=[[UIBarButtonItem alloc] init];
     [barButton setCustomView:button];
-    self.navigationItem.leftBarButtonItem=barButton;
+    self.navigationItem.rightBarButtonItem=barButton;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,6 +58,11 @@
     [self.navigationController setNavigationBarHidden:NO];
     [self.navigationController.navigationBar setBackgroundColor:[UIColor blackColor]];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
+    
+    [[Services shared] getNewsWithHandler:^(NSArray *result, NSError *error) {
+        self.liste = result;
+        [self.tableView reloadData];
+    }];
 
 }
 
@@ -77,7 +84,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return self.liste.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,20 +92,32 @@
     static NSString *simpleTableIdentifier = @"DecorTableCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
+    
+    LieuDeTournage *l1 = [self.liste objectAtIndex:indexPath.row];
+    
     // Configure Cell
     UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
-    [label setText:[NSString stringWithFormat:@"Cat - Name"]];
+    [label setText:[l1.mainClassification uppercaseString]];
 
+    UIImageView *mainImageView = (UIImageView *)[cell.contentView viewWithTag:3];
+    [mainImageView setImage:[Services convertImageToGrayScale:[UIImage imageNamed:l1.mainImageName]]];
     
     UIButton *heart = (UIButton *)[cell.contentView viewWithTag:2];
     [heart addTarget:self action:@selector(favoriteButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    if(indexPath.row == 0)
+    [heart setTitle:[NSString stringWithFormat:@"%i",l1.likes] forState:UIControlStateNormal];
+    
+    if([[Services shared] alreadyLikeThisPlace:l1])
     {
         [heart setBackgroundImage:[UIImage imageNamed:@"buttonHeartRed.png"] forState:UIControlStateNormal];
     }
     else
     {
         [heart setBackgroundImage:[UIImage imageNamed:@"buttonHeartBlack.png"] forState:UIControlStateNormal];
+    }
+    
+    if(l1.likes>9)
+    {
+        [heart setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, 0)];
     }
 
     
@@ -113,7 +132,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"toDetail"]) {
-        NSLog(@"row : %i", ((NSIndexPath*) sender).row);
+        NSLog(@"row : %lu", ((NSIndexPath*) sender).row);
     }
 }
 
@@ -124,6 +143,7 @@
     }
     else
     {
+        [[Services shared] logoff];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
@@ -132,7 +152,13 @@
 {
     UITableViewCell *clickedCell =  (UITableViewCell*) [[sender superview] superview];
     NSIndexPath *indexPath = [self.tableView indexPathForCell:clickedCell];
-    NSLog(@"Click : %i", indexPath.row);
+    NSLog(@"Click : %lu", indexPath.row);
+    
+    LieuDeTournage *lieu = [self.liste objectAtIndex:indexPath.row];
+    
+    [[Services shared] likeThisPlace:lieu];
+    
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 /*

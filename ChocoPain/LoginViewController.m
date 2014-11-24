@@ -125,6 +125,11 @@
     NSString *userName = self.loginTF.text;
     NSString *password = self.passwordTF.text;
     
+    if(bypass)
+    {
+        userName = @"Demo";
+    }
+    
     [[Services shared] loginWithUserName:userName andPassword:password withHandler:^(BOOL success, NSError *error) {
         //        UIAlertView *alerview = [[UIAlertView alloc] initWithTitle:@"Login result" message:[NSString stringWithFormat:@"Result : %i", result] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
         //

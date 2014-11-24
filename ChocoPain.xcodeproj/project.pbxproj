@@ -28,12 +28,10 @@
 		099ACAC91A229CFA00F568C0 /* loginScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAC41A229CFA00F568C0 /* loginScreen.png */; };
 		099ACAD41A22AC5D00F568C0 /* buttonExit.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACB1A22AC5D00F568C0 /* buttonExit.png */; };
 		099ACAD51A22AC5D00F568C0 /* buttonExitPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACC1A22AC5D00F568C0 /* buttonExitPushed.png */; };
-		099ACAD61A22AC5D00F568C0 /* BOUTON LIKE 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACD1A22AC5D00F568C0 /* BOUTON LIKE 1.png */; };
-		099ACAD71A22AC5D00F568C0 /* BOUTON LIKE PUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACE1A22AC5D00F568C0 /* BOUTON LIKE PUSH.png */; };
-		099ACAD81A22AC5D00F568C0 /* BOUTON PERSO BLANC.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACF1A22AC5D00F568C0 /* BOUTON PERSO BLANC.png */; };
-		099ACAD91A22AC5D00F568C0 /* BOUTON PERSO PUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD01A22AC5D00F568C0 /* BOUTON PERSO PUSH.png */; };
-		099ACADA1A22AC5D00F568C0 /* BOUTON PLAN BLANC.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD11A22AC5D00F568C0 /* BOUTON PLAN BLANC.png */; };
-		099ACADB1A22AC5D00F568C0 /* BOUTON PLAN PUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD21A22AC5D00F568C0 /* BOUTON PLAN PUSH.png */; };
+		099ACAD81A22AC5D00F568C0 /* buttonPerso.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACF1A22AC5D00F568C0 /* buttonPerso.png */; };
+		099ACAD91A22AC5D00F568C0 /* buttonPersoPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD01A22AC5D00F568C0 /* buttonPersoPushed.png */; };
+		099ACADA1A22AC5D00F568C0 /* buttonMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD11A22AC5D00F568C0 /* buttonMap.png */; };
+		099ACADB1A22AC5D00F568C0 /* buttonMapPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD21A22AC5D00F568C0 /* buttonMapPushed.png */; };
 		099ACADC1A22AC5D00F568C0 /* degradePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD31A22AC5D00F568C0 /* degradePhoto.png */; };
 		099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099ACADE1A22B2C100F568C0 /* Antonio-Light.ttf */; };
 		099ACAE21A22B2C100F568C0 /* Antonio-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099ACADF1A22B2C100F568C0 /* Antonio-Regular.ttf */; };
@@ -42,6 +40,15 @@
 		099ACAED1A23130000F568C0 /* buttonHeartRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAEA1A23130000F568C0 /* buttonHeartRed.png */; };
 		099ACAEE1A23130000F568C0 /* buttonHeartBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAEB1A23130000F568C0 /* buttonHeartBlack.png */; };
 		099ACAEF1A23130000F568C0 /* buttonHeartWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAEC1A23130000F568C0 /* buttonHeartWhite.png */; };
+		099ACAF81A2332B400F568C0 /* naval1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAF11A2332B400F568C0 /* naval1.jpeg */; };
+		099ACAF91A2332B400F568C0 /* naval2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAF21A2332B400F568C0 /* naval2.jpeg */; };
+		099ACAFA1A2332B400F568C0 /* naval3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAF31A2332B400F568C0 /* naval3.jpeg */; };
+		099ACAFB1A2332B400F568C0 /* naval4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAF41A2332B400F568C0 /* naval4.jpeg */; };
+		099ACAFC1A2332B400F568C0 /* naval5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAF51A2332B400F568C0 /* naval5.jpeg */; };
+		099ACAFD1A2332B400F568C0 /* naval6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAF61A2332B400F568C0 /* naval6.jpeg */; };
+		099ACAFE1A2332B400F568C0 /* naval7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAF71A2332B400F568C0 /* naval7.jpeg */; };
+		099ACB011A2332EB00F568C0 /* LieuDeTournage.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACB001A2332EB00F568C0 /* LieuDeTournage.m */; };
+		099ACB041A23452D00F568C0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACB031A23452D00F568C0 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,12 +94,10 @@
 		099ACAC41A229CFA00F568C0 /* loginScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginScreen.png; sourceTree = "<group>"; };
 		099ACACB1A22AC5D00F568C0 /* buttonExit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonExit.png; sourceTree = "<group>"; };
 		099ACACC1A22AC5D00F568C0 /* buttonExitPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonExitPushed.png; sourceTree = "<group>"; };
-		099ACACD1A22AC5D00F568C0 /* BOUTON LIKE 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON LIKE 1.png"; sourceTree = "<group>"; };
-		099ACACE1A22AC5D00F568C0 /* BOUTON LIKE PUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON LIKE PUSH.png"; sourceTree = "<group>"; };
-		099ACACF1A22AC5D00F568C0 /* BOUTON PERSO BLANC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON PERSO BLANC.png"; sourceTree = "<group>"; };
-		099ACAD01A22AC5D00F568C0 /* BOUTON PERSO PUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON PERSO PUSH.png"; sourceTree = "<group>"; };
-		099ACAD11A22AC5D00F568C0 /* BOUTON PLAN BLANC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON PLAN BLANC.png"; sourceTree = "<group>"; };
-		099ACAD21A22AC5D00F568C0 /* BOUTON PLAN PUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON PLAN PUSH.png"; sourceTree = "<group>"; };
+		099ACACF1A22AC5D00F568C0 /* buttonPerso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPerso.png; sourceTree = "<group>"; };
+		099ACAD01A22AC5D00F568C0 /* buttonPersoPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPersoPushed.png; sourceTree = "<group>"; };
+		099ACAD11A22AC5D00F568C0 /* buttonMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonMap.png; sourceTree = "<group>"; };
+		099ACAD21A22AC5D00F568C0 /* buttonMapPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonMapPushed.png; sourceTree = "<group>"; };
 		099ACAD31A22AC5D00F568C0 /* degradePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = degradePhoto.png; sourceTree = "<group>"; };
 		099ACADE1A22B2C100F568C0 /* Antonio-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Light.ttf"; sourceTree = "<group>"; };
 		099ACADF1A22B2C100F568C0 /* Antonio-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Regular.ttf"; sourceTree = "<group>"; };
@@ -102,6 +107,17 @@
 		099ACAEA1A23130000F568C0 /* buttonHeartRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonHeartRed.png; sourceTree = "<group>"; };
 		099ACAEB1A23130000F568C0 /* buttonHeartBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonHeartBlack.png; sourceTree = "<group>"; };
 		099ACAEC1A23130000F568C0 /* buttonHeartWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonHeartWhite.png; sourceTree = "<group>"; };
+		099ACAF11A2332B400F568C0 /* naval1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = naval1.jpeg; sourceTree = "<group>"; };
+		099ACAF21A2332B400F568C0 /* naval2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = naval2.jpeg; sourceTree = "<group>"; };
+		099ACAF31A2332B400F568C0 /* naval3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = naval3.jpeg; sourceTree = "<group>"; };
+		099ACAF41A2332B400F568C0 /* naval4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = naval4.jpeg; sourceTree = "<group>"; };
+		099ACAF51A2332B400F568C0 /* naval5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = naval5.jpeg; sourceTree = "<group>"; };
+		099ACAF61A2332B400F568C0 /* naval6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = naval6.jpeg; sourceTree = "<group>"; };
+		099ACAF71A2332B400F568C0 /* naval7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = naval7.jpeg; sourceTree = "<group>"; };
+		099ACAFF1A2332EB00F568C0 /* LieuDeTournage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LieuDeTournage.h; sourceTree = "<group>"; };
+		099ACB001A2332EB00F568C0 /* LieuDeTournage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LieuDeTournage.m; sourceTree = "<group>"; };
+		099ACB021A23452D00F568C0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		099ACB031A23452D00F568C0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +217,10 @@
 				0951880B1A223F7800193100 /* Services.m */,
 				099ACABA1A22846A00F568C0 /* Classification.h */,
 				099ACABB1A22846A00F568C0 /* Classification.m */,
+				099ACAFF1A2332EB00F568C0 /* LieuDeTournage.h */,
+				099ACB001A2332EB00F568C0 /* LieuDeTournage.m */,
+				099ACB021A23452D00F568C0 /* User.h */,
+				099ACB031A23452D00F568C0 /* User.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -216,6 +236,7 @@
 		099ACAB71A227D8400F568C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				099ACAF01A2332B400F568C0 /* Chantier Naval */,
 				099ACACA1A22AC4B00F568C0 /* DecorList */,
 				099ACAB81A227D9500F568C0 /* launch.png */,
 				099ACAC41A229CFA00F568C0 /* loginScreen.png */,
@@ -235,12 +256,10 @@
 				099ACAEC1A23130000F568C0 /* buttonHeartWhite.png */,
 				099ACACB1A22AC5D00F568C0 /* buttonExit.png */,
 				099ACACC1A22AC5D00F568C0 /* buttonExitPushed.png */,
-				099ACACD1A22AC5D00F568C0 /* BOUTON LIKE 1.png */,
-				099ACACE1A22AC5D00F568C0 /* BOUTON LIKE PUSH.png */,
-				099ACACF1A22AC5D00F568C0 /* BOUTON PERSO BLANC.png */,
-				099ACAD01A22AC5D00F568C0 /* BOUTON PERSO PUSH.png */,
-				099ACAD11A22AC5D00F568C0 /* BOUTON PLAN BLANC.png */,
-				099ACAD21A22AC5D00F568C0 /* BOUTON PLAN PUSH.png */,
+				099ACACF1A22AC5D00F568C0 /* buttonPerso.png */,
+				099ACAD01A22AC5D00F568C0 /* buttonPersoPushed.png */,
+				099ACAD11A22AC5D00F568C0 /* buttonMap.png */,
+				099ACAD21A22AC5D00F568C0 /* buttonMapPushed.png */,
 				099ACAD31A22AC5D00F568C0 /* degradePhoto.png */,
 			);
 			name = DecorList;
@@ -254,6 +273,20 @@
 				099ACAE01A22B2C100F568C0 /* Antonio-Bold.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		099ACAF01A2332B400F568C0 /* Chantier Naval */ = {
+			isa = PBXGroup;
+			children = (
+				099ACAF11A2332B400F568C0 /* naval1.jpeg */,
+				099ACAF21A2332B400F568C0 /* naval2.jpeg */,
+				099ACAF31A2332B400F568C0 /* naval3.jpeg */,
+				099ACAF41A2332B400F568C0 /* naval4.jpeg */,
+				099ACAF51A2332B400F568C0 /* naval5.jpeg */,
+				099ACAF61A2332B400F568C0 /* naval6.jpeg */,
+				099ACAF71A2332B400F568C0 /* naval7.jpeg */,
+			);
+			path = "Chantier Naval";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,29 +371,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				099ACAC71A229CFA00F568C0 /* facebookButton.png in Resources */,
-				099ACAD91A22AC5D00F568C0 /* BOUTON PERSO PUSH.png in Resources */,
+				099ACAD91A22AC5D00F568C0 /* buttonPersoPushed.png in Resources */,
 				099ACAE21A22B2C100F568C0 /* Antonio-Regular.ttf in Resources */,
 				099ACAD41A22AC5D00F568C0 /* buttonExit.png in Resources */,
-				099ACADB1A22AC5D00F568C0 /* BOUTON PLAN PUSH.png in Resources */,
+				099ACAFC1A2332B400F568C0 /* naval5.jpeg in Resources */,
+				099ACADB1A22AC5D00F568C0 /* buttonMapPushed.png in Resources */,
 				099ACAEE1A23130000F568C0 /* buttonHeartBlack.png in Resources */,
 				099ACAB91A227D9500F568C0 /* launch.png in Resources */,
 				099ACAC91A229CFA00F568C0 /* loginScreen.png in Resources */,
 				095187EF1A22346000193100 /* Main.storyboard in Resources */,
-				099ACAD61A22AC5D00F568C0 /* BOUTON LIKE 1.png in Resources */,
+				099ACAFA1A2332B400F568C0 /* naval3.jpeg in Resources */,
+				099ACAFD1A2332B400F568C0 /* naval6.jpeg in Resources */,
 				099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */,
 				095187F41A22346000193100 /* LaunchScreen.xib in Resources */,
-				099ACAD81A22AC5D00F568C0 /* BOUTON PERSO BLANC.png in Resources */,
+				099ACAFE1A2332B400F568C0 /* naval7.jpeg in Resources */,
+				099ACAD81A22AC5D00F568C0 /* buttonPerso.png in Resources */,
 				099ACAE31A22B2C100F568C0 /* Antonio-Bold.ttf in Resources */,
 				099ACADC1A22AC5D00F568C0 /* degradePhoto.png in Resources */,
 				099ACAC61A229CFA00F568C0 /* facebookButtonPushed.png in Resources */,
 				099ACAEF1A23130000F568C0 /* buttonHeartWhite.png in Resources */,
-				099ACADA1A22AC5D00F568C0 /* BOUTON PLAN BLANC.png in Resources */,
+				099ACADA1A22AC5D00F568C0 /* buttonMap.png in Resources */,
+				099ACAF81A2332B400F568C0 /* naval1.jpeg in Resources */,
 				099ACAD51A22AC5D00F568C0 /* buttonExitPushed.png in Resources */,
+				099ACAF91A2332B400F568C0 /* naval2.jpeg in Resources */,
 				099ACAC51A229CFA00F568C0 /* reaButtonPushed.png in Resources */,
 				099ACAC81A229CFA00F568C0 /* reaButton.png in Resources */,
-				099ACAD71A22AC5D00F568C0 /* BOUTON LIKE PUSH.png in Resources */,
 				099ACAED1A23130000F568C0 /* buttonHeartRed.png in Resources */,
 				095187F11A22346000193100 /* Images.xcassets in Resources */,
+				099ACAFB1A2332B400F568C0 /* naval4.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +422,8 @@
 				0951880F1A22500B00193100 /* MapViewController.m in Sources */,
 				095187E91A22346000193100 /* AppDelegate.m in Sources */,
 				099ACABF1A228D8100F568C0 /* DecorListViewController.m in Sources */,
+				099ACB041A23452D00F568C0 /* User.m in Sources */,
+				099ACB011A2332EB00F568C0 /* LieuDeTournage.m in Sources */,
 				095187E61A22346000193100 /* main.m in Sources */,
 				099ACABC1A22846A00F568C0 /* Classification.m in Sources */,
 				092332821A225DDC00BF80FB /* AdoptingAnAnnotation.m in Sources */,
