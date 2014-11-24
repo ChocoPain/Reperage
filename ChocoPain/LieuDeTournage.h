@@ -18,7 +18,8 @@
 @property (nonatomic) BOOL owner;
 @property (nonatomic, strong) NSArray* imagesName;
 @property (nonatomic, strong) NSString* user;
-@property (nonatomic) BOOL alreadyUSed;
+@property (nonatomic) BOOL alreadyUsed;
+@property (nonatomic, strong) NSString *explicationUsed;
 @property (nonatomic) int likes;
 
 - (NSString*) mainClassification;

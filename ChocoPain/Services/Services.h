@@ -32,7 +32,11 @@
 - (void) classificateThisPlace:(LieuDeTournage*) lieu withThisClassification:(NSString*) classification;
 
 #pragma mark - Owner
--(void) ownerThisPlace:(LieuDeTournage*) lieu;
+- (void) ownerThisPlace:(LieuDeTournage*) lieu;
+
+#pragma mark - AlreadyUsed
+- (void) alreadyUsedThisPlace:(LieuDeTournage*) lieu;
+- (void) addExplicationForThisPlace:(LieuDeTournage*) lieu explication:(NSString*)explication;
 
 #pragma mark - Listing
 

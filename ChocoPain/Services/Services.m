@@ -115,6 +115,27 @@
     }
 }
 
+-(void) alreadyUsedThisPlace:(LieuDeTournage*) lieu
+{
+    for (LieuDeTournage *l in self.cacheListe) {
+        if(l.numberId == lieu.numberId)
+        {
+            l.alreadyUsed = !l.alreadyUsed;
+        }
+    }
+}
+
+- (void)addExplicationForThisPlace:(LieuDeTournage *)lieu explication:(NSString *)explication
+{
+    for (LieuDeTournage *l in self.cacheListe) {
+        if(l.numberId == lieu.numberId)
+        {
+            l.explicationUsed = explication;
+        }
+    }
+}
+
+
 #pragma mark - Listing
 
 - (void) getNewsWithHandler:(void (^)(NSArray* result, NSError *error)) completionBlock
@@ -133,6 +154,8 @@
         l2.imagesName = [NSArray arrayWithObjects:@"naval3.jpeg", @"naval4.jpeg", nil];
         l2.likes = 1;
         l2.classifications = [NSMutableArray arrayWithObjects:@"Appartement", nil];
+        l2.alreadyUsed = YES;
+        l2.explicationUsed = @"Film à grand succès...";
         
         LieuDeTournage *l3 = [[LieuDeTournage alloc] init];
         l3.numberId = 3;

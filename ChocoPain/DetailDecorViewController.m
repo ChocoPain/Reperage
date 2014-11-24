@@ -10,11 +10,18 @@
 #import "ClassificationsViewController.h"
 #import "Services.h"
 
-@interface DetailDecorViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate>
+@interface DetailDecorViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) UIImagePickerController *imgPicker;
 @property (weak, nonatomic) IBOutlet UIButton *ownerButton;
+@property (weak, nonatomic) IBOutlet UIButton *alreadyUsedButton;
+@property (weak, nonatomic) IBOutlet UITextField *explication;
+
+@property (weak, nonatomic) UITextField *activeField;
+
+@property (weak, nonatomic) IBOutlet UITextField *explicationTextField;
+@property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 
 @end
 
@@ -23,6 +30,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
     
     UIButton *buttonL = [UIButton buttonWithType:UIButtonTypeCustom];
     buttonL.frame = CGRectMake(0, 0, 16, 23);
@@ -69,9 +86,15 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    
+
     [self initialized];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [[Services shared] addExplicationForThisPlace:self.lieu explication:self.explication.text];
 }
 
 - (void) initialized
@@ -87,29 +110,65 @@
         [self.ownerButton setImage:[UIImage imageNamed:@"OKBUTTONSANS"] forState:UIControlStateNormal];
     }
     
+    if(self.lieu.alreadyUsed)
+    {
+        [self.alreadyUsedButton setImage:[UIImage imageNamed:@"OKBUTTON"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.alreadyUsedButton setImage:[UIImage imageNamed:@"OKBUTTONSANS"] forState:UIControlStateNormal];
+    }
+    
+    [self.explication setText:self.lieu.explicationUsed];
+    
 }
 
 - (void) displayImages
 {
     int count = 0;
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20+count*130, 5, 120, 120)];
+    [button setImage:[UIImage imageNamed:@"PHOTOBUTTON.png"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(addPhoto:) forControlEvents:UIControlEventTouchUpInside];
+    [self.scrollView addSubview:button];
+    
+    count++;
     for (NSString *imageName in self.lieu.imagesName) {
         UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
         
-        [imageV setFrame:CGRectMake(10+count*150, 5, 120, 120)];
-        
-        
+        [imageV setFrame:CGRectMake(20+count*130, 5, 120, 120)];
         [self.scrollView addSubview:imageV];
         count++;
     }
+    count--;
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10+count*150, 5, 120, 120)];
-    [button setImage:[UIImage imageNamed:@"PHOTOBUTTON.png"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(addPhoto:) forControlEvents:UIControlEventTouchUpInside];
+    self.scrollView.contentSize = CGSizeMake(135 * (self.lieu.imagesName.count+1), 130);
 
-    [self.scrollView addSubview:button];
+}
+
+- (void) keyboardDidShow:(NSNotification *)notification
+{
+    NSDictionary* info = [notification userInfo];
+    CGRect kbRect = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    kbRect = [self.view convertRect:kbRect fromView:nil];
     
-    self.scrollView.contentSize = CGSizeMake(160 * (self.lieu.imagesName.count+1), 130);
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbRect.size.height + 60, 0.0);
+    self.mainScrollView.contentInset = contentInsets;
+    self.mainScrollView.scrollIndicatorInsets = contentInsets;
+    
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbRect.size.height;
+    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
+        CGRect frame = CGRectMake(self.activeField.frame.origin.x, self.activeField.frame.origin.y, self.activeField.frame.size.width, self.activeField.frame.size.height);
+        [self.mainScrollView scrollRectToVisible:frame animated:YES];
+    }
+}
 
+- (void) keyboardWillBeHidden:(NSNotification *)notification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.mainScrollView.contentInset = contentInsets;
+    self.mainScrollView.scrollIndicatorInsets = contentInsets;
 }
 
 - (void) addPhoto:(id) sender
@@ -178,7 +237,35 @@
     {
         [self.ownerButton setImage:[UIImage imageNamed:@"OKBUTTONSANS"] forState:UIControlStateNormal];
     }
+}
+- (IBAction)alreadyUsedClicked:(id)sender {
     
+    [[Services shared] alreadyUsedThisPlace:self.lieu];
+    
+    if(self.lieu.alreadyUsed)
+    {
+        [self.alreadyUsedButton setImage:[UIImage imageNamed:@"OKBUTTON"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.alreadyUsedButton setImage:[UIImage imageNamed:@"OKBUTTONSANS"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)textFieldDidBeginEditing:(UITextField *)sender
+{
+    self.activeField = sender;
+}
+
+- (IBAction)textFieldDidEndEditing:(UITextField *)sender
+{
+    self.activeField = nil;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*
