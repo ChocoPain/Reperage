@@ -88,6 +88,9 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="highlighted" image="boutoninscriptionpush.png"/>
+                                                <connections>
+                                                    <segue destination="DGT-y8-N0m" kind="show" id="ldX-DX-Gjj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660.5" y="623.5"/>
+            <point key="canvasLocation" x="-603.5" y="495.5"/>
         </scene>
         <!--Fake Demo View Controller-->
         <scene sceneID="frR-CD-ucJ">
@@ -173,6 +176,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="J0y-cL-w5G" kind="show" identifier="toRecherche" id="oN8-VN-xuw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nE-gK-hIn">
                                 <rect key="frame" x="0.0" y="308" width="375" height="92"/>
@@ -208,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYz-SU-S82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277.5" y="1072.5"/>
+            <point key="canvasLocation" x="-110.5" y="1304.5"/>
         </scene>
         <!--Actualité-->
         <scene sceneID="9gp-Yf-Kcr">
@@ -219,7 +225,7 @@
                         <viewControllerLayoutGuide type="bottom" id="SZm-gb-Eic"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="98Y-y5-5JD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="209" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iDi-Hk-zLi">
@@ -292,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDJ-Gq-FEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352.5" y="92.5"/>
+            <point key="canvasLocation" x="1232.5" y="92.5"/>
         </scene>
         <!--Detail Decor View Controller-->
         <scene sceneID="LKA-Vv-bpg">
@@ -578,15 +584,75 @@
                             <constraint firstItem="mp7-ne-pMR" firstAttribute="leading" secondItem="G61-4I-vjs" secondAttribute="leading" id="vOw-HA-hN7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainImage" destination="mp7-ne-pMR" id="4Rc-VS-Jlz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4T0-w8-qD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782.5" y="814.5"/>
+            <point key="canvasLocation" x="416.5" y="1030.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Inscription View Controller-->
+        <scene sceneID="DLf-j1-k7Q">
+            <objects>
+                <viewController id="DGT-y8-N0m" customClass="InscriptionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JCq-hd-crx"/>
+                        <viewControllerLayoutGuide type="bottom" id="PEb-ED-g1F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cZZ-Ya-bcz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pageconnexion.png" translatesAutoresizingMaskIntoConstraints="NO" id="CcZ-Bt-1uL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="603" id="SUE-Rj-Qhw"/>
+                                    <constraint firstAttribute="width" constant="375" id="Scr-ye-KNn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dW4-JC-csx">
+                                <rect key="frame" x="117" y="478" width="57" height="57"/>
+                                <state key="normal" image="FACEBOOK.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="FACEBOOKPUSH.png"/>
+                                <connections>
+                                    <action selector="facebookButtonPressed:" destination="DGT-y8-N0m" eventType="touchUpInside" id="e5V-2R-aSc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8r-1l-Jnh">
+                                <rect key="frame" x="188" y="478" width="57" height="57"/>
+                                <state key="normal" image="TWITTER.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="TWITTERPUSH.png"/>
+                                <connections>
+                                    <action selector="twitterButtonPressed:" destination="DGT-y8-N0m" eventType="touchUpInside" id="TC2-qH-9AM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CcZ-Bt-1uL" firstAttribute="top" secondItem="JCq-hd-crx" secondAttribute="bottom" id="0JT-ID-c5i"/>
+                            <constraint firstItem="CcZ-Bt-1uL" firstAttribute="leading" secondItem="cZZ-Ya-bcz" secondAttribute="leadingMargin" constant="-16" id="Dhd-oP-lih"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="facebookButton" destination="dW4-JC-csx" id="unE-Pc-cFx"/>
+                        <outlet property="twitterButton" destination="L8r-1l-Jnh" id="osj-Vj-M6f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dr-Ur-1qQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1133.5" y="495.5"/>
+        </scene>
+        <!--Fake Demo View Controller-->
         <scene sceneID="jWS-bT-6y4">
             <objects>
-                <viewController id="QJM-i9-o97" sceneMemberID="viewController">
+                <viewController id="QJM-i9-o97" customClass="FakeDemoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xli-Mo-itN"/>
                         <viewControllerLayoutGuide type="bottom" id="uhO-wi-FBM"/>
@@ -612,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puJ-gy-ilD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782.5" y="1534.5"/>
+            <point key="canvasLocation" x="416.5" y="2836.5"/>
         </scene>
         <!--Classifications View Controller-->
         <scene sceneID="zz5-87-zqf">
@@ -661,7 +727,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykP-YV-GhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2309.5" y="486.5"/>
+            <point key="canvasLocation" x="2309.5" y="495.5"/>
         </scene>
         <!--Start Up View Controller-->
         <scene sceneID="g3j-1z-zvc">
@@ -678,7 +744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yj-zI-FkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-168.5" y="-303.5"/>
+            <point key="canvasLocation" x="-484.5" y="-321.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3cT-kK-qU9">
@@ -697,19 +763,70 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zO-TK-Xes" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="-321"/>
+            <point key="canvasLocation" x="-23.5" y="-321.5"/>
+        </scene>
+        <!--Fake Demo View Controller-->
+        <scene sceneID="dBx-RI-elc">
+            <objects>
+                <viewController id="J0y-cL-w5G" customClass="FakeDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WU7-ic-baO"/>
+                        <viewControllerLayoutGuide type="bottom" id="GJs-55-q0k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iiR-pf-MKy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PAGERECHERCHE.png" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-LK-d23">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="603" id="J48-Ns-dRp"/>
+                                    <constraint firstAttribute="width" constant="375" id="rbN-D3-eKd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGA-D5-mnY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="OlI-JF-49e"/>
+                                    <constraint firstAttribute="height" constant="603" id="t6W-za-ld1"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="869-pM-Y1c" kind="show" id="l35-dN-gzg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hGb-LK-d23" firstAttribute="top" secondItem="WU7-ic-baO" secondAttribute="bottom" id="HDp-Qa-W7w"/>
+                            <constraint firstItem="hGb-LK-d23" firstAttribute="leading" secondItem="iiR-pf-MKy" secondAttribute="leading" id="J0S-io-HwV"/>
+                            <constraint firstItem="wGA-D5-mnY" firstAttribute="leading" secondItem="iiR-pf-MKy" secondAttribute="leadingMargin" constant="-16" id="h6r-Nc-O4I"/>
+                            <constraint firstItem="wGA-D5-mnY" firstAttribute="top" secondItem="WU7-ic-baO" secondAttribute="bottom" id="yEK-nC-EAs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VeK-ux-rHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.5" y="1763.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="BARRETAG.png" width="1129" height="145"/>
         <image name="BLACKBUTTON.png" width="25" height="25"/>
         <image name="CLASSIFICATION.png" width="1501" height="277"/>
+        <image name="FACEBOOK.png" width="203" height="203"/>
+        <image name="FACEBOOKPUSH.png" width="203" height="203"/>
         <image name="LOCALISATION.png" width="1501" height="277"/>
         <image name="OKBUTTON.png" width="123" height="135"/>
         <image name="PAGEDEMANDE.png" width="1507" height="2406"/>
         <image name="PAGEPROJET.png" width="1507" height="2406"/>
+        <image name="PAGERECHERCHE.png" width="1507" height="2406"/>
         <image name="PAGESECTIONS.png" width="1508" height="2406"/>
         <image name="RECHERCHELIEUTOURNAGE.png" width="1365" height="111"/>
+        <image name="TWITTER.png" width="203" height="203"/>
+        <image name="TWITTERPUSH.png" width="203" height="203"/>
         <image name="boutoninscription.png" width="349" height="89"/>
         <image name="boutoninscriptionpush.png" width="349" height="89"/>
         <image name="buttonHeartBlack.png" width="180" height="155"/>
@@ -719,10 +836,11 @@
         <image name="facebookButtonPushed.png" width="647" height="210"/>
         <image name="launch.png" width="1500" height="2688"/>
         <image name="loginScreen.png" width="1500" height="2687"/>
+        <image name="pageconnexion.png" width="1501" height="2308"/>
         <image name="reaButton.png" width="647" height="210"/>
         <image name="reaButtonPushed.png" width="647" height="210"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ukx-HE-ITU"/>
+        <segue reference="PSz-Xd-DJ0"/>
     </inferredMetricsTieBreakers>
 </document>

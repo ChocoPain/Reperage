@@ -10,6 +10,7 @@
 #import "DecorListViewController.h"
 
 @interface FakeDemoViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *mainImage;
 
 @end
 
@@ -56,11 +57,113 @@
     UIBarButtonItem *barButton=[[UIBarButtonItem alloc] init];
     [barButton setCustomView:button];
     self.navigationItem.rightBarButtonItem=barButton;
+    
+    
+    if(self.type == 1) //Dashboard
+    {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        //[view setBackgroundColor:[UIColor redColor]];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        [label setFont:[UIFont fontWithName:@"Antonio-Regular" size:17.f]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"DASHBOARD"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [view addSubview:label];
+        
+        [self.navigationItem setTitleView:view];
+    }
+    
+    if(self.type == 2)
+    {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        //[view setBackgroundColor:[UIColor redColor]];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        [label setFont:[UIFont fontWithName:@"Antonio-Regular" size:17.f]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"MES PROJETS"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [view addSubview:label];
+        
+        [self.navigationItem setTitleView:view];
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(0, 0, 90, 24);
+        [button setTitle:@"Modifier" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(actionRight:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *barButton=[[UIBarButtonItem alloc] init];
+        [barButton setCustomView:button];
+        self.navigationItem.rightBarButtonItem=barButton;
+    }
+    
+    if(self.type == 3) //demande
+    {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        //[view setBackgroundColor:[UIColor redColor]];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        [label setFont:[UIFont fontWithName:@"Antonio-Regular" size:17.f]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"DEMANDE"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [view addSubview:label];
+        
+        [self.navigationItem setTitleView:view];
+        
+        UIBarButtonItem *barButton=[[UIBarButtonItem alloc] init];
+        [barButton setTitle:@"Valider"];    
+        [barButton setTintColor:[UIColor whiteColor]];
+        self.navigationItem.rightBarButtonItem=barButton;
+    }
+    
+    if(self.type == 4) //Rechercher
+    {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        //[view setBackgroundColor:[UIColor redColor]];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        [label setFont:[UIFont fontWithName:@"Antonio-Regular" size:17.f]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"RECHERCHE"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [view addSubview:label];
+        
+        [self.navigationItem setTitleView:view];
+    }
 }
 
 - (void) actionLeft:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (void) actionRight:(id) sender
+{
+    if (self.type == 2) {
+        [self.mainImage setImage:[UIImage imageNamed:@"PAGEPROJETMODIF.png"]];
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(0, 0, 90, 24);
+        [button setTitle:@"OK" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(actionRightBack:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *barButton=[[UIBarButtonItem alloc] init];
+        [barButton setCustomView:button];
+        self.navigationItem.rightBarButtonItem=barButton;
+    }
+}
+
+- (void) actionRightBack:(id) sender
+{
+    if (self.type == 2) {
+        [self.mainImage setImage:[UIImage imageNamed:@"PAGEPROJET.png"]];
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(0, 0, 90, 24);
+        [button setTitle:@"Modifier" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(actionRight:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *barButton=[[UIBarButtonItem alloc] init];
+        [barButton setCustomView:button];
+        self.navigationItem.rightBarButtonItem=barButton;
+    }
 }
 
 
@@ -86,6 +189,12 @@
         FakeDemoViewController *vc = [segue destinationViewController];
         vc.type = 3;
     }
+    else if ([[segue identifier] isEqualToString:@"toRecherche"])
+    {
+        FakeDemoViewController *vc = [segue destinationViewController];
+        vc.type = 4;
+    }
+    
     
 }
 

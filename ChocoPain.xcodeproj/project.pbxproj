@@ -75,6 +75,10 @@
 		099ACB371A23560D00F568C0 /* TWITTER.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB221A23560D00F568C0 /* TWITTER.png */; };
 		099ACB381A23560D00F568C0 /* TWITTERPUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB231A23560D00F568C0 /* TWITTERPUSH.png */; };
 		099ACB3B1A238D4500F568C0 /* ClassificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACB3A1A238D4500F568C0 /* ClassificationsViewController.m */; };
+		09A8A7601A23C6D700E2F39D /* PAGERECHERCHE.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A75F1A23C6D700E2F39D /* PAGERECHERCHE.png */; };
+		09A8A7621A23C91300E2F39D /* PAGEPROJETMODIF.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7611A23C91300E2F39D /* PAGEPROJETMODIF.png */; };
+		09A8A7641A23CC7600E2F39D /* pageconnexion.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7631A23CC7600E2F39D /* pageconnexion.png */; };
+		09A8A7671A23CD2600E2F39D /* InscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8A7661A23CD2600E2F39D /* InscriptionViewController.m */; };
 		09D67E431A23BED1004CE2C7 /* PAGEPROJET.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */; };
 		09D67E451A23C077004CE2C7 /* PAGEDEMANDE.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */; };
 /* End PBXBuildFile section */
@@ -165,6 +169,11 @@
 		099ACB231A23560D00F568C0 /* TWITTERPUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TWITTERPUSH.png; sourceTree = "<group>"; };
 		099ACB391A238D4500F568C0 /* ClassificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationsViewController.h; sourceTree = "<group>"; };
 		099ACB3A1A238D4500F568C0 /* ClassificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassificationsViewController.m; sourceTree = "<group>"; };
+		09A8A75F1A23C6D700E2F39D /* PAGERECHERCHE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGERECHERCHE.png; sourceTree = "<group>"; };
+		09A8A7611A23C91300E2F39D /* PAGEPROJETMODIF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGEPROJETMODIF.png; sourceTree = "<group>"; };
+		09A8A7631A23CC7600E2F39D /* pageconnexion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pageconnexion.png; path = "Detail Decor/pageconnexion.png"; sourceTree = "<group>"; };
+		09A8A7651A23CD2600E2F39D /* InscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InscriptionViewController.h; sourceTree = "<group>"; };
+		09A8A7661A23CD2600E2F39D /* InscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InscriptionViewController.m; sourceTree = "<group>"; };
 		09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGEPROJET.png; sourceTree = "<group>"; };
 		09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGEDEMANDE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +196,8 @@
 				092D30451A23B83E0089FDDB /* PAGESECTIONS.png */,
 				09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */,
 				09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */,
+				09A8A75F1A23C6D700E2F39D /* PAGERECHERCHE.png */,
+				09A8A7611A23C91300E2F39D /* PAGEPROJETMODIF.png */,
 			);
 			name = FakeImage;
 			sourceTree = "<group>";
@@ -232,6 +243,8 @@
 				099ACB3A1A238D4500F568C0 /* ClassificationsViewController.m */,
 				092332801A225DDC00BF80FB /* AdoptingAnAnnotation.h */,
 				092332811A225DDC00BF80FB /* AdoptingAnAnnotation.m */,
+				09A8A7651A23CD2600E2F39D /* InscriptionViewController.h */,
+				09A8A7661A23CD2600E2F39D /* InscriptionViewController.m */,
 				092D30471A23B8B70089FDDB /* FakeDemoViewController.h */,
 				092D30481A23B8B70089FDDB /* FakeDemoViewController.m */,
 				095188121A22541300193100 /* Frameworks */,
@@ -297,6 +310,7 @@
 				099ACAF01A2332B400F568C0 /* Chantier Naval */,
 				099ACACA1A22AC4B00F568C0 /* DecorList */,
 				099ACB0E1A23560D00F568C0 /* Detail Decor */,
+				09A8A7631A23CC7600E2F39D /* pageconnexion.png */,
 				099ACAB81A227D9500F568C0 /* launch.png */,
 				099ACAC41A229CFA00F568C0 /* loginScreen.png */,
 				092D30401A23B51E0089FDDB /* boutoninscription.png */,
@@ -450,6 +464,7 @@
 				099ACB281A23560D00F568C0 /* CLASSIFICATION.png in Resources */,
 				099ACAB91A227D9500F568C0 /* launch.png in Resources */,
 				09D67E451A23C077004CE2C7 /* PAGEDEMANDE.png in Resources */,
+				09A8A7641A23CC7600E2F39D /* pageconnexion.png in Resources */,
 				099ACB2F1A23560D00F568C0 /* LOCALISATION.png in Resources */,
 				099ACB2A1A23560D00F568C0 /* FACEBOOKPUSH.png in Resources */,
 				099ACB2E1A23560D00F568C0 /* INSTAGRAMPUSH.png in Resources */,
@@ -462,6 +477,7 @@
 				099ACB271A23560D00F568C0 /* BLACKBUTTON.png in Resources */,
 				099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */,
 				092D30461A23B83E0089FDDB /* PAGESECTIONS.png in Resources */,
+				09A8A7601A23C6D700E2F39D /* PAGERECHERCHE.png in Resources */,
 				09D67E431A23BED1004CE2C7 /* PAGEPROJET.png in Resources */,
 				095187F41A22346000193100 /* LaunchScreen.xib in Resources */,
 				099ACB321A23560D00F568C0 /* PHOTOBUTTON.png in Resources */,
@@ -485,6 +501,7 @@
 				099ACAD51A22AC5D00F568C0 /* buttonExitPushed.png in Resources */,
 				099ACB261A23560D00F568C0 /* BARRETAG.png in Resources */,
 				099ACB361A23560D00F568C0 /* RECHERCHELIEUTOURNAGE.png in Resources */,
+				09A8A7621A23C91300E2F39D /* PAGEPROJETMODIF.png in Resources */,
 				099ACAF91A2332B400F568C0 /* naval2.jpeg in Resources */,
 				099ACAC51A229CFA00F568C0 /* reaButtonPushed.png in Resources */,
 				099ACAC81A229CFA00F568C0 /* reaButton.png in Resources */,
@@ -511,6 +528,7 @@
 				099ACABF1A228D8100F568C0 /* DecorListViewController.m in Sources */,
 				092D30491A23B8B70089FDDB /* FakeDemoViewController.m in Sources */,
 				099ACB041A23452D00F568C0 /* User.m in Sources */,
+				09A8A7671A23CD2600E2F39D /* InscriptionViewController.m in Sources */,
 				099ACB011A2332EB00F568C0 /* LieuDeTournage.m in Sources */,
 				095187E61A22346000193100 /* main.m in Sources */,
 				099ACABC1A22846A00F568C0 /* Classification.m in Sources */,
