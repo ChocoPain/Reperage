@@ -49,8 +49,8 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0, 0, 12, 24);
     //button.backgroundColor = [UIColor redColor];
-    [button setImage:[UIImage imageNamed:@"buttonMap.png"] forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"buttonMapPushed.png"] forState:UIControlStateHighlighted];
+    //[button setImage:[UIImage imageNamed:@"buttonMap.png"] forState:UIControlStateNormal];
+    //[button setImage:[UIImage imageNamed:@"buttonMapPushed.png"] forState:UIControlStateHighlighted];
     //[button addTarget:self action:@selector(exit:) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *barButton=[[UIBarButtonItem alloc] init];
@@ -76,6 +76,17 @@
         DecorListViewController *vc = [segue destinationViewController];
         vc.editing = NO;
     }
+    else if ([[segue identifier] isEqualToString:@"toMyProjects"])
+    {
+        FakeDemoViewController *vc = [segue destinationViewController];
+        vc.type = 2;
+    }
+    else if ([[segue identifier] isEqualToString:@"toDemande"])
+    {
+        FakeDemoViewController *vc = [segue destinationViewController];
+        vc.type = 3;
+    }
+    
 }
 
 

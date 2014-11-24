@@ -75,6 +75,8 @@
 		099ACB371A23560D00F568C0 /* TWITTER.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB221A23560D00F568C0 /* TWITTER.png */; };
 		099ACB381A23560D00F568C0 /* TWITTERPUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB231A23560D00F568C0 /* TWITTERPUSH.png */; };
 		099ACB3B1A238D4500F568C0 /* ClassificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACB3A1A238D4500F568C0 /* ClassificationsViewController.m */; };
+		09D67E431A23BED1004CE2C7 /* PAGEPROJET.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */; };
+		09D67E451A23C077004CE2C7 /* PAGEDEMANDE.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +165,8 @@
 		099ACB231A23560D00F568C0 /* TWITTERPUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TWITTERPUSH.png; sourceTree = "<group>"; };
 		099ACB391A238D4500F568C0 /* ClassificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationsViewController.h; sourceTree = "<group>"; };
 		099ACB3A1A238D4500F568C0 /* ClassificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassificationsViewController.m; sourceTree = "<group>"; };
+		09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGEPROJET.png; sourceTree = "<group>"; };
+		09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGEDEMANDE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				092D30451A23B83E0089FDDB /* PAGESECTIONS.png */,
+				09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */,
+				09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */,
 			);
 			name = FakeImage;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 				099ACB351A23560D00F568C0 /* PINTERESTPUSH.png in Resources */,
 				099ACB281A23560D00F568C0 /* CLASSIFICATION.png in Resources */,
 				099ACAB91A227D9500F568C0 /* launch.png in Resources */,
+				09D67E451A23C077004CE2C7 /* PAGEDEMANDE.png in Resources */,
 				099ACB2F1A23560D00F568C0 /* LOCALISATION.png in Resources */,
 				099ACB2A1A23560D00F568C0 /* FACEBOOKPUSH.png in Resources */,
 				099ACB2E1A23560D00F568C0 /* INSTAGRAMPUSH.png in Resources */,
@@ -455,6 +462,7 @@
 				099ACB271A23560D00F568C0 /* BLACKBUTTON.png in Resources */,
 				099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */,
 				092D30461A23B83E0089FDDB /* PAGESECTIONS.png in Resources */,
+				09D67E431A23BED1004CE2C7 /* PAGEPROJET.png in Resources */,
 				095187F41A22346000193100 /* LaunchScreen.xib in Resources */,
 				099ACB321A23560D00F568C0 /* PHOTOBUTTON.png in Resources */,
 				099ACB331A23560D00F568C0 /* PHOTOBUTTONPUSH.png in Resources */,

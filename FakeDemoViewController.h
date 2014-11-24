@@ -11,4 +11,10 @@
 @interface FakeDemoViewController : UIViewController
 
 @property (nonatomic) int type;
+/*
+ Type :
+        1. de Login vers Fake Dashboard
+        2. de Fake Dashboard vers Fake Projets
+        3. de Fake Dashboard vers Fake Demande
+*/
 @end
