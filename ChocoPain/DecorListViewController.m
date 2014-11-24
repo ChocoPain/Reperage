@@ -9,7 +9,7 @@
 #import "DecorListViewController.h"
 #import "Services.h"
 
-@interface DecorListViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface DecorListViewController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 
 @end
 
@@ -19,16 +19,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.navigationController setNavigationBarHidden:NO];
-    [self.navigationController.navigationBar setBackgroundColor:[UIColor blackColor]];
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
-    
     UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Flip"
                                    style:UIBarButtonItemStylePlain
                                    target:self
                                    action:@selector(addDecor:)];
     self.navigationItem.rightBarButtonItem = flipButton;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 22, 22);
+    //button.backgroundColor = [UIColor redColor];
+    [button setImage:[UIImage imageNamed:@"buttonExit.png"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"buttonExitPushed.png"] forState:UIControlStateHighlighted];
+    [button addTarget:self action:@selector(exit:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *barButton=[[UIBarButtonItem alloc] init];
+    [barButton setCustomView:button];
+    self.navigationItem.leftBarButtonItem=barButton;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +48,16 @@
     [super viewWillAppear:animated];
     
     //[Services shared]
+    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor blackColor]];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
 
+}
+
+- (void) exit:(id) sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Etes-vous sûr de vouloir vous déconnecter ?" delegate:self cancelButtonTitle:@"Annuler" destructiveButtonTitle:@"Oui" otherButtonTitles:nil];
+    [actionSheet showInView:self.view];
 }
 
 - (void) addDecor:(id) sender
@@ -71,6 +87,17 @@
     
     cell.textLabel.text = @"test";
     return cell;
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==1) {
+        [actionSheet dismissWithClickedButtonIndex:buttonIndex animated:YES];
+    }
+    else
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 /*

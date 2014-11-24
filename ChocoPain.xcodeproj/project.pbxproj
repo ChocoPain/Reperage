@@ -26,8 +26,8 @@
 		099ACAC71A229CFA00F568C0 /* facebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAC21A229CFA00F568C0 /* facebookButton.png */; };
 		099ACAC81A229CFA00F568C0 /* reaButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAC31A229CFA00F568C0 /* reaButton.png */; };
 		099ACAC91A229CFA00F568C0 /* loginScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAC41A229CFA00F568C0 /* loginScreen.png */; };
-		099ACAD41A22AC5D00F568C0 /* BOUTON EXIT BLANC.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACB1A22AC5D00F568C0 /* BOUTON EXIT BLANC.png */; };
-		099ACAD51A22AC5D00F568C0 /* BOUTON EXIT PUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACC1A22AC5D00F568C0 /* BOUTON EXIT PUSH.png */; };
+		099ACAD41A22AC5D00F568C0 /* buttonExit.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACB1A22AC5D00F568C0 /* buttonExit.png */; };
+		099ACAD51A22AC5D00F568C0 /* buttonExitPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACC1A22AC5D00F568C0 /* buttonExitPushed.png */; };
 		099ACAD61A22AC5D00F568C0 /* BOUTON LIKE 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACD1A22AC5D00F568C0 /* BOUTON LIKE 1.png */; };
 		099ACAD71A22AC5D00F568C0 /* BOUTON LIKE PUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACE1A22AC5D00F568C0 /* BOUTON LIKE PUSH.png */; };
 		099ACAD81A22AC5D00F568C0 /* BOUTON PERSO BLANC.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACACF1A22AC5D00F568C0 /* BOUTON PERSO BLANC.png */; };
@@ -78,8 +78,8 @@
 		099ACAC21A229CFA00F568C0 /* facebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookButton.png; sourceTree = "<group>"; };
 		099ACAC31A229CFA00F568C0 /* reaButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reaButton.png; sourceTree = "<group>"; };
 		099ACAC41A229CFA00F568C0 /* loginScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginScreen.png; sourceTree = "<group>"; };
-		099ACACB1A22AC5D00F568C0 /* BOUTON EXIT BLANC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON EXIT BLANC.png"; sourceTree = "<group>"; };
-		099ACACC1A22AC5D00F568C0 /* BOUTON EXIT PUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON EXIT PUSH.png"; sourceTree = "<group>"; };
+		099ACACB1A22AC5D00F568C0 /* buttonExit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonExit.png; sourceTree = "<group>"; };
+		099ACACC1A22AC5D00F568C0 /* buttonExitPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonExitPushed.png; sourceTree = "<group>"; };
 		099ACACD1A22AC5D00F568C0 /* BOUTON LIKE 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON LIKE 1.png"; sourceTree = "<group>"; };
 		099ACACE1A22AC5D00F568C0 /* BOUTON LIKE PUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON LIKE PUSH.png"; sourceTree = "<group>"; };
 		099ACACF1A22AC5D00F568C0 /* BOUTON PERSO BLANC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON PERSO BLANC.png"; sourceTree = "<group>"; };
@@ -212,8 +212,8 @@
 		099ACACA1A22AC4B00F568C0 /* DecorList */ = {
 			isa = PBXGroup;
 			children = (
-				099ACACB1A22AC5D00F568C0 /* BOUTON EXIT BLANC.png */,
-				099ACACC1A22AC5D00F568C0 /* BOUTON EXIT PUSH.png */,
+				099ACACB1A22AC5D00F568C0 /* buttonExit.png */,
+				099ACACC1A22AC5D00F568C0 /* buttonExitPushed.png */,
 				099ACACD1A22AC5D00F568C0 /* BOUTON LIKE 1.png */,
 				099ACACE1A22AC5D00F568C0 /* BOUTON LIKE PUSH.png */,
 				099ACACF1A22AC5D00F568C0 /* BOUTON PERSO BLANC.png */,
@@ -308,7 +308,7 @@
 			files = (
 				099ACAC71A229CFA00F568C0 /* facebookButton.png in Resources */,
 				099ACAD91A22AC5D00F568C0 /* BOUTON PERSO PUSH.png in Resources */,
-				099ACAD41A22AC5D00F568C0 /* BOUTON EXIT BLANC.png in Resources */,
+				099ACAD41A22AC5D00F568C0 /* buttonExit.png in Resources */,
 				099ACADB1A22AC5D00F568C0 /* BOUTON PLAN PUSH.png in Resources */,
 				099ACAB91A227D9500F568C0 /* launch.png in Resources */,
 				099ACAC91A229CFA00F568C0 /* loginScreen.png in Resources */,
@@ -319,7 +319,7 @@
 				099ACADC1A22AC5D00F568C0 /* DEGRADE PHOTO.png in Resources */,
 				099ACAC61A229CFA00F568C0 /* facebookButtonPushed.png in Resources */,
 				099ACADA1A22AC5D00F568C0 /* BOUTON PLAN BLANC.png in Resources */,
-				099ACAD51A22AC5D00F568C0 /* BOUTON EXIT PUSH.png in Resources */,
+				099ACAD51A22AC5D00F568C0 /* buttonExitPushed.png in Resources */,
 				099ACAC51A229CFA00F568C0 /* reaButtonPushed.png in Resources */,
 				099ACAC81A229CFA00F568C0 /* reaButton.png in Resources */,
 				099ACAD71A22AC5D00F568C0 /* BOUTON LIKE PUSH.png in Resources */,
