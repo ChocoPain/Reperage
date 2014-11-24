@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		092332821A225DDC00BF80FB /* AdoptingAnAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 092332811A225DDC00BF80FB /* AdoptingAnAnnotation.m */; };
+		092D30421A23B51E0089FDDB /* boutoninscription.png in Resources */ = {isa = PBXBuildFile; fileRef = 092D30401A23B51E0089FDDB /* boutoninscription.png */; };
+		092D30431A23B51E0089FDDB /* boutoninscriptionpush.png in Resources */ = {isa = PBXBuildFile; fileRef = 092D30411A23B51E0089FDDB /* boutoninscriptionpush.png */; };
+		092D30461A23B83E0089FDDB /* PAGESECTIONS.png in Resources */ = {isa = PBXBuildFile; fileRef = 092D30451A23B83E0089FDDB /* PAGESECTIONS.png */; };
+		092D30491A23B8B70089FDDB /* FakeDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D30481A23B8B70089FDDB /* FakeDemoViewController.m */; };
 		095187E61A22346000193100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187E51A22346000193100 /* main.m */; };
 		095187E91A22346000193100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187E81A22346000193100 /* AppDelegate.m */; };
 		095187EC1A22346000193100 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095187EB1A22346000193100 /* LoginViewController.m */; };
@@ -76,6 +80,11 @@
 /* Begin PBXFileReference section */
 		092332801A225DDC00BF80FB /* AdoptingAnAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdoptingAnAnnotation.h; sourceTree = "<group>"; };
 		092332811A225DDC00BF80FB /* AdoptingAnAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdoptingAnAnnotation.m; sourceTree = "<group>"; };
+		092D30401A23B51E0089FDDB /* boutoninscription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boutoninscription.png; sourceTree = "<group>"; };
+		092D30411A23B51E0089FDDB /* boutoninscriptionpush.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boutoninscriptionpush.png; sourceTree = "<group>"; };
+		092D30451A23B83E0089FDDB /* PAGESECTIONS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGESECTIONS.png; sourceTree = "<group>"; };
+		092D30471A23B8B70089FDDB /* FakeDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FakeDemoViewController.h; path = ../FakeDemoViewController.h; sourceTree = "<group>"; };
+		092D30481A23B8B70089FDDB /* FakeDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FakeDemoViewController.m; path = ../FakeDemoViewController.m; sourceTree = "<group>"; };
 		095187E01A22346000193100 /* Repérage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Repérage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		095187E41A22346000193100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095187E51A22346000193100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -168,6 +177,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092D30441A23B8230089FDDB /* FakeImage */ = {
+			isa = PBXGroup;
+			children = (
+				092D30451A23B83E0089FDDB /* PAGESECTIONS.png */,
+			);
+			name = FakeImage;
+			sourceTree = "<group>";
+		};
 		095187D71A22346000193100 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +226,8 @@
 				099ACB3A1A238D4500F568C0 /* ClassificationsViewController.m */,
 				092332801A225DDC00BF80FB /* AdoptingAnAnnotation.h */,
 				092332811A225DDC00BF80FB /* AdoptingAnAnnotation.m */,
+				092D30471A23B8B70089FDDB /* FakeDemoViewController.h */,
+				092D30481A23B8B70089FDDB /* FakeDemoViewController.m */,
 				095188121A22541300193100 /* Frameworks */,
 				095187E31A22346000193100 /* Supporting Files */,
 			);
@@ -268,11 +287,14 @@
 		099ACAB71A227D8400F568C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				092D30441A23B8230089FDDB /* FakeImage */,
 				099ACAF01A2332B400F568C0 /* Chantier Naval */,
 				099ACACA1A22AC4B00F568C0 /* DecorList */,
 				099ACB0E1A23560D00F568C0 /* Detail Decor */,
 				099ACAB81A227D9500F568C0 /* launch.png */,
 				099ACAC41A229CFA00F568C0 /* loginScreen.png */,
+				092D30401A23B51E0089FDDB /* boutoninscription.png */,
+				092D30411A23B51E0089FDDB /* boutoninscriptionpush.png */,
 				099ACAC31A229CFA00F568C0 /* reaButton.png */,
 				099ACAC01A229CFA00F568C0 /* reaButtonPushed.png */,
 				099ACAC11A229CFA00F568C0 /* facebookButtonPushed.png */,
@@ -416,6 +438,7 @@
 				099ACADB1A22AC5D00F568C0 /* buttonMapPushed.png in Resources */,
 				099ACB311A23560D00F568C0 /* OKBUTTONSANS.png in Resources */,
 				099ACAEE1A23130000F568C0 /* buttonHeartBlack.png in Resources */,
+				092D30421A23B51E0089FDDB /* boutoninscription.png in Resources */,
 				099ACB341A23560D00F568C0 /* PINTEREST.png in Resources */,
 				099ACB351A23560D00F568C0 /* PINTERESTPUSH.png in Resources */,
 				099ACB281A23560D00F568C0 /* CLASSIFICATION.png in Resources */,
@@ -431,11 +454,13 @@
 				099ACAFD1A2332B400F568C0 /* naval6.jpeg in Resources */,
 				099ACB271A23560D00F568C0 /* BLACKBUTTON.png in Resources */,
 				099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */,
+				092D30461A23B83E0089FDDB /* PAGESECTIONS.png in Resources */,
 				095187F41A22346000193100 /* LaunchScreen.xib in Resources */,
 				099ACB321A23560D00F568C0 /* PHOTOBUTTON.png in Resources */,
 				099ACB331A23560D00F568C0 /* PHOTOBUTTONPUSH.png in Resources */,
 				099ACAFE1A2332B400F568C0 /* naval7.jpeg in Resources */,
 				099ACAD81A22AC5D00F568C0 /* buttonPerso.png in Resources */,
+				092D30431A23B51E0089FDDB /* boutoninscriptionpush.png in Resources */,
 				099ACB241A23560D00F568C0 /* BACKBUTTON.png in Resources */,
 				099ACB251A23560D00F568C0 /* BACKBUTTONPUSH.png in Resources */,
 				099ACAE31A22B2C100F568C0 /* Antonio-Bold.ttf in Resources */,
@@ -476,6 +501,7 @@
 				095187E91A22346000193100 /* AppDelegate.m in Sources */,
 				099ACB0D1A2354CC00F568C0 /* DetailDecorViewController.m in Sources */,
 				099ACABF1A228D8100F568C0 /* DecorListViewController.m in Sources */,
+				092D30491A23B8B70089FDDB /* FakeDemoViewController.m in Sources */,
 				099ACB041A23452D00F568C0 /* User.m in Sources */,
 				099ACB011A2332EB00F568C0 /* LieuDeTournage.m in Sources */,
 				095187E61A22346000193100 /* main.m in Sources */,

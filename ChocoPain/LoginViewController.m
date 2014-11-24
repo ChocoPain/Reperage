@@ -12,6 +12,7 @@
 
 #import "MapViewController.h"
 #import "DecorListViewController.h"
+#import "FakeDemoViewController.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -43,6 +44,11 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void) keyboardDidShow:(NSNotification *)notification
@@ -86,11 +92,17 @@
 //        [vc setName:@"Salomé..."];
 //    }
 //    else
-        if ([[segue identifier] isEqualToString:@"toDecorList"]) {
+    if ([[segue identifier] isEqualToString:@"toDecorList"]) {
         
         // Get destination view
         //DecorListViewController *vc = [segue destinationViewController];
         
+    }
+    
+    if ([[segue identifier] isEqualToString:@"toSections"])
+    {
+        FakeDemoViewController *vc = [segue destinationViewController];
+        vc.type = 1;
     }
 }
 
