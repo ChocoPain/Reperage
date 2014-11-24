@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 @interface Services : NSObject
 
 + (id)shared;
++ (UIImage *)convertImageToGrayScale:(UIImage *)image;
+
 
 - (void) loginWithUserName:(NSString *) string andPassword:(NSString*) password withHandler:(void (^)(BOOL result, NSError *error))completionBlock;
 
