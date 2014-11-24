@@ -34,7 +34,10 @@
 		099ACAD91A22AC5D00F568C0 /* BOUTON PERSO PUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD01A22AC5D00F568C0 /* BOUTON PERSO PUSH.png */; };
 		099ACADA1A22AC5D00F568C0 /* BOUTON PLAN BLANC.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD11A22AC5D00F568C0 /* BOUTON PLAN BLANC.png */; };
 		099ACADB1A22AC5D00F568C0 /* BOUTON PLAN PUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD21A22AC5D00F568C0 /* BOUTON PLAN PUSH.png */; };
-		099ACADC1A22AC5D00F568C0 /* DEGRADE PHOTO.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD31A22AC5D00F568C0 /* DEGRADE PHOTO.png */; };
+		099ACADC1A22AC5D00F568C0 /* degradePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAD31A22AC5D00F568C0 /* degradePhoto.png */; };
+		099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099ACADE1A22B2C100F568C0 /* Antonio-Light.ttf */; };
+		099ACAE21A22B2C100F568C0 /* Antonio-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099ACADF1A22B2C100F568C0 /* Antonio-Regular.ttf */; };
+		099ACAE31A22B2C100F568C0 /* Antonio-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAE01A22B2C100F568C0 /* Antonio-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +89,10 @@
 		099ACAD01A22AC5D00F568C0 /* BOUTON PERSO PUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON PERSO PUSH.png"; sourceTree = "<group>"; };
 		099ACAD11A22AC5D00F568C0 /* BOUTON PLAN BLANC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON PLAN BLANC.png"; sourceTree = "<group>"; };
 		099ACAD21A22AC5D00F568C0 /* BOUTON PLAN PUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BOUTON PLAN PUSH.png"; sourceTree = "<group>"; };
-		099ACAD31A22AC5D00F568C0 /* DEGRADE PHOTO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DEGRADE PHOTO.png"; sourceTree = "<group>"; };
+		099ACAD31A22AC5D00F568C0 /* degradePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = degradePhoto.png; sourceTree = "<group>"; };
+		099ACADE1A22B2C100F568C0 /* Antonio-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Light.ttf"; sourceTree = "<group>"; };
+		099ACADF1A22B2C100F568C0 /* Antonio-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Regular.ttf"; sourceTree = "<group>"; };
+		099ACAE01A22B2C100F568C0 /* Antonio-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 		095187E31A22346000193100 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				099ACADD1A22B2B200F568C0 /* Fonts */,
 				095187E41A22346000193100 /* Info.plist */,
 				095187E51A22346000193100 /* main.m */,
 			);
@@ -220,9 +227,19 @@
 				099ACAD01A22AC5D00F568C0 /* BOUTON PERSO PUSH.png */,
 				099ACAD11A22AC5D00F568C0 /* BOUTON PLAN BLANC.png */,
 				099ACAD21A22AC5D00F568C0 /* BOUTON PLAN PUSH.png */,
-				099ACAD31A22AC5D00F568C0 /* DEGRADE PHOTO.png */,
+				099ACAD31A22AC5D00F568C0 /* degradePhoto.png */,
 			);
 			name = DecorList;
+			sourceTree = "<group>";
+		};
+		099ACADD1A22B2B200F568C0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				099ACADE1A22B2C100F568C0 /* Antonio-Light.ttf */,
+				099ACADF1A22B2C100F568C0 /* Antonio-Regular.ttf */,
+				099ACAE01A22B2C100F568C0 /* Antonio-Bold.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,15 +325,18 @@
 			files = (
 				099ACAC71A229CFA00F568C0 /* facebookButton.png in Resources */,
 				099ACAD91A22AC5D00F568C0 /* BOUTON PERSO PUSH.png in Resources */,
+				099ACAE21A22B2C100F568C0 /* Antonio-Regular.ttf in Resources */,
 				099ACAD41A22AC5D00F568C0 /* buttonExit.png in Resources */,
 				099ACADB1A22AC5D00F568C0 /* BOUTON PLAN PUSH.png in Resources */,
 				099ACAB91A227D9500F568C0 /* launch.png in Resources */,
 				099ACAC91A229CFA00F568C0 /* loginScreen.png in Resources */,
 				095187EF1A22346000193100 /* Main.storyboard in Resources */,
 				099ACAD61A22AC5D00F568C0 /* BOUTON LIKE 1.png in Resources */,
+				099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */,
 				095187F41A22346000193100 /* LaunchScreen.xib in Resources */,
 				099ACAD81A22AC5D00F568C0 /* BOUTON PERSO BLANC.png in Resources */,
-				099ACADC1A22AC5D00F568C0 /* DEGRADE PHOTO.png in Resources */,
+				099ACAE31A22B2C100F568C0 /* Antonio-Bold.ttf in Resources */,
+				099ACADC1A22AC5D00F568C0 /* degradePhoto.png in Resources */,
 				099ACAC61A229CFA00F568C0 /* facebookButtonPushed.png in Resources */,
 				099ACADA1A22AC5D00F568C0 /* BOUTON PLAN BLANC.png in Resources */,
 				099ACAD51A22AC5D00F568C0 /* buttonExitPushed.png in Resources */,

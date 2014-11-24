@@ -19,12 +19,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Flip"
-                                   style:UIBarButtonItemStylePlain
-                                   target:self
-                                   action:@selector(addDecor:)];
-    self.navigationItem.rightBarButtonItem = flipButton;
+    UIButton *buttonL = [UIButton buttonWithType:UIButtonTypeCustom];
+    buttonL.frame = CGRectMake(0, 0, 22, 22);
+    //button.backgroundColor = [UIColor redColor];
+    [buttonL setImage:[UIImage imageNamed:@"buttonExit.png"] forState:UIControlStateNormal];
+    [buttonL setImage:[UIImage imageNamed:@"buttonExitPushed.png"] forState:UIControlStateHighlighted];
+    [buttonL addTarget:self action:@selector(addDecor:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *barButtonL=[[UIBarButtonItem alloc] init];
+    [barButtonL setCustomView:buttonL];
+    self.navigationItem.leftBarButtonItem=barButtonL;
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0, 0, 22, 22);
@@ -75,17 +79,15 @@
     return 5;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *simpleTableIdentifier = @"DecorTableCell";
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    static NSString *simpleTableIdentifier = @"DecorTableCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
+    // Configure Cell
+    UILabel *label = (UILabel *)[cell.contentView viewWithTag:1];
+    [label setText:[NSString stringWithFormat:@"Row %i in Section %i", [indexPath row], [indexPath section]]];
     
-    cell.textLabel.text = @"test";
     return cell;
 }
 
