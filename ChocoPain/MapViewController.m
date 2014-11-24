@@ -25,6 +25,41 @@
     
     NSLog(@"Bonjour : %@", self.name);
     [self.mapView setDelegate:self];
+    
+    UIButton *buttonL = [UIButton buttonWithType:UIButtonTypeCustom];
+    buttonL.frame = CGRectMake(0, 0, 16, 23);
+    //button.backgroundColor = [UIColor redColor];
+    [buttonL setImage:[UIImage imageNamed:@"BACKBUTTON.png"] forState:UIControlStateNormal];
+    [buttonL setImage:[UIImage imageNamed:@"BACKBUTTONPush.png"] forState:UIControlStateHighlighted];
+    [buttonL addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *barButtonL=[[UIBarButtonItem alloc] init];
+    [barButtonL setCustomView:buttonL];
+    self.navigationItem.leftBarButtonItem=barButtonL;
+    
+    UIButton *fakeB = [UIButton buttonWithType:UIButtonTypeCustom];
+    fakeB.frame = CGRectMake(0, 0, 16, 23);
+    UIBarButtonItem *barButtonRF=[[UIBarButtonItem alloc] init];
+    [barButtonRF setCustomView:fakeB];
+    self.navigationItem.rightBarButtonItem=barButtonRF;
+    
+    //[self.navigationItem setTitle:@"Détail"];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+    //[view setBackgroundColor:[UIColor redColor]];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+    [label setFont:[UIFont fontWithName:@"Antonio-Regular" size:17.f]];
+    [label setTextColor:[UIColor whiteColor]];
+    [label setText:@"Localisation"];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [view addSubview:label];
+    
+    [self.navigationItem setTitleView:view];
+}
+
+- (void)back:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

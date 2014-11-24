@@ -9,6 +9,7 @@
 #import "DecorListViewController.h"
 #import "Services.h"
 #import "LieuDeTournage.h"
+#import "DetailDecorViewController.h"
 
 @interface DecorListViewController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -133,6 +134,9 @@
 {
     if ([[segue identifier] isEqualToString:@"toDetail"]) {
         NSLog(@"row : %lu", ((NSIndexPath*) sender).row);
+        
+        DetailDecorViewController *vc = [segue destinationViewController];
+        vc.lieu =[self.liste objectAtIndex:((NSIndexPath*) sender).row];
     }
 }
 

@@ -96,7 +96,7 @@
     {
         LieuDeTournage *l1 = [[LieuDeTournage alloc] init];
         l1.numberId = 1;
-        l1.imagesName = [NSArray arrayWithObjects:@"naval1.jpeg", @"naval2.jpeg", nil];
+        l1.imagesName = [NSArray arrayWithObjects:@"naval1.jpeg", @"naval2.jpeg", @"naval4.jpeg", nil];
         l1.likes = 3;
         l1.classifications = [NSArray arrayWithObjects:@"Transport maritime/fluvial", nil];
         

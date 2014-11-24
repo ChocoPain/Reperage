@@ -49,6 +49,28 @@
 		099ACAFE1A2332B400F568C0 /* naval7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 099ACAF71A2332B400F568C0 /* naval7.jpeg */; };
 		099ACB011A2332EB00F568C0 /* LieuDeTournage.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACB001A2332EB00F568C0 /* LieuDeTournage.m */; };
 		099ACB041A23452D00F568C0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACB031A23452D00F568C0 /* User.m */; };
+		099ACB0D1A2354CC00F568C0 /* DetailDecorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099ACB0C1A2354CC00F568C0 /* DetailDecorViewController.m */; };
+		099ACB241A23560D00F568C0 /* BACKBUTTON.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB0F1A23560D00F568C0 /* BACKBUTTON.png */; };
+		099ACB251A23560D00F568C0 /* BACKBUTTONPUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB101A23560D00F568C0 /* BACKBUTTONPUSH.png */; };
+		099ACB261A23560D00F568C0 /* BARRETAG.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB111A23560D00F568C0 /* BARRETAG.png */; };
+		099ACB271A23560D00F568C0 /* BLACKBUTTON.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB121A23560D00F568C0 /* BLACKBUTTON.png */; };
+		099ACB281A23560D00F568C0 /* CLASSIFICATION.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB131A23560D00F568C0 /* CLASSIFICATION.png */; };
+		099ACB291A23560D00F568C0 /* FACEBOOK.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB141A23560D00F568C0 /* FACEBOOK.png */; };
+		099ACB2A1A23560D00F568C0 /* FACEBOOKPUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB151A23560D00F568C0 /* FACEBOOKPUSH.png */; };
+		099ACB2B1A23560D00F568C0 /* FLICKR.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB161A23560D00F568C0 /* FLICKR.png */; };
+		099ACB2C1A23560D00F568C0 /* FLICKRPUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB171A23560D00F568C0 /* FLICKRPUSH.png */; };
+		099ACB2D1A23560D00F568C0 /* INSTAGRAM.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB181A23560D00F568C0 /* INSTAGRAM.png */; };
+		099ACB2E1A23560D00F568C0 /* INSTAGRAMPUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB191A23560D00F568C0 /* INSTAGRAMPUSH.png */; };
+		099ACB2F1A23560D00F568C0 /* LOCALISATION.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB1A1A23560D00F568C0 /* LOCALISATION.png */; };
+		099ACB301A23560D00F568C0 /* OKBUTTON1.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB1B1A23560D00F568C0 /* OKBUTTON1.png */; };
+		099ACB311A23560D00F568C0 /* OKBUTTONSANS.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB1C1A23560D00F568C0 /* OKBUTTONSANS.png */; };
+		099ACB321A23560D00F568C0 /* PHOTOBUTTON.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB1D1A23560D00F568C0 /* PHOTOBUTTON.png */; };
+		099ACB331A23560D00F568C0 /* PHOTOBUTTONPUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB1E1A23560D00F568C0 /* PHOTOBUTTONPUSH.png */; };
+		099ACB341A23560D00F568C0 /* PINTEREST.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB1F1A23560D00F568C0 /* PINTEREST.png */; };
+		099ACB351A23560D00F568C0 /* PINTERESTPUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB201A23560D00F568C0 /* PINTERESTPUSH.png */; };
+		099ACB361A23560D00F568C0 /* RECHERCHELIEUTOURNAGE.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB211A23560D00F568C0 /* RECHERCHELIEUTOURNAGE.png */; };
+		099ACB371A23560D00F568C0 /* TWITTER.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB221A23560D00F568C0 /* TWITTER.png */; };
+		099ACB381A23560D00F568C0 /* TWITTERPUSH.png in Resources */ = {isa = PBXBuildFile; fileRef = 099ACB231A23560D00F568C0 /* TWITTERPUSH.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +140,29 @@
 		099ACB001A2332EB00F568C0 /* LieuDeTournage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LieuDeTournage.m; sourceTree = "<group>"; };
 		099ACB021A23452D00F568C0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		099ACB031A23452D00F568C0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		099ACB0B1A2354CC00F568C0 /* DetailDecorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailDecorViewController.h; sourceTree = "<group>"; };
+		099ACB0C1A2354CC00F568C0 /* DetailDecorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailDecorViewController.m; sourceTree = "<group>"; };
+		099ACB0F1A23560D00F568C0 /* BACKBUTTON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BACKBUTTON.png; sourceTree = "<group>"; };
+		099ACB101A23560D00F568C0 /* BACKBUTTONPUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BACKBUTTONPUSH.png; sourceTree = "<group>"; };
+		099ACB111A23560D00F568C0 /* BARRETAG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BARRETAG.png; sourceTree = "<group>"; };
+		099ACB121A23560D00F568C0 /* BLACKBUTTON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BLACKBUTTON.png; sourceTree = "<group>"; };
+		099ACB131A23560D00F568C0 /* CLASSIFICATION.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CLASSIFICATION.png; sourceTree = "<group>"; };
+		099ACB141A23560D00F568C0 /* FACEBOOK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FACEBOOK.png; sourceTree = "<group>"; };
+		099ACB151A23560D00F568C0 /* FACEBOOKPUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FACEBOOKPUSH.png; sourceTree = "<group>"; };
+		099ACB161A23560D00F568C0 /* FLICKR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FLICKR.png; sourceTree = "<group>"; };
+		099ACB171A23560D00F568C0 /* FLICKRPUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FLICKRPUSH.png; sourceTree = "<group>"; };
+		099ACB181A23560D00F568C0 /* INSTAGRAM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = INSTAGRAM.png; sourceTree = "<group>"; };
+		099ACB191A23560D00F568C0 /* INSTAGRAMPUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = INSTAGRAMPUSH.png; sourceTree = "<group>"; };
+		099ACB1A1A23560D00F568C0 /* LOCALISATION.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOCALISATION.png; sourceTree = "<group>"; };
+		099ACB1B1A23560D00F568C0 /* OKBUTTON1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OKBUTTON1.png; sourceTree = "<group>"; };
+		099ACB1C1A23560D00F568C0 /* OKBUTTONSANS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OKBUTTONSANS.png; sourceTree = "<group>"; };
+		099ACB1D1A23560D00F568C0 /* PHOTOBUTTON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PHOTOBUTTON.png; sourceTree = "<group>"; };
+		099ACB1E1A23560D00F568C0 /* PHOTOBUTTONPUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PHOTOBUTTONPUSH.png; sourceTree = "<group>"; };
+		099ACB1F1A23560D00F568C0 /* PINTEREST.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PINTEREST.png; sourceTree = "<group>"; };
+		099ACB201A23560D00F568C0 /* PINTERESTPUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PINTERESTPUSH.png; sourceTree = "<group>"; };
+		099ACB211A23560D00F568C0 /* RECHERCHELIEUTOURNAGE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RECHERCHELIEUTOURNAGE.png; sourceTree = "<group>"; };
+		099ACB221A23560D00F568C0 /* TWITTER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TWITTER.png; sourceTree = "<group>"; };
+		099ACB231A23560D00F568C0 /* TWITTERPUSH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TWITTERPUSH.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +218,8 @@
 				095187F21A22346000193100 /* LaunchScreen.xib */,
 				099ACABD1A228D8100F568C0 /* DecorListViewController.h */,
 				099ACABE1A228D8100F568C0 /* DecorListViewController.m */,
+				099ACB0B1A2354CC00F568C0 /* DetailDecorViewController.h */,
+				099ACB0C1A2354CC00F568C0 /* DetailDecorViewController.m */,
 				0951880D1A22500B00193100 /* MapViewController.h */,
 				0951880E1A22500B00193100 /* MapViewController.m */,
 				092332801A225DDC00BF80FB /* AdoptingAnAnnotation.h */,
@@ -238,6 +285,7 @@
 			children = (
 				099ACAF01A2332B400F568C0 /* Chantier Naval */,
 				099ACACA1A22AC4B00F568C0 /* DecorList */,
+				099ACB0E1A23560D00F568C0 /* Detail Decor */,
 				099ACAB81A227D9500F568C0 /* launch.png */,
 				099ACAC41A229CFA00F568C0 /* loginScreen.png */,
 				099ACAC31A229CFA00F568C0 /* reaButton.png */,
@@ -287,6 +335,34 @@
 				099ACAF71A2332B400F568C0 /* naval7.jpeg */,
 			);
 			path = "Chantier Naval";
+			sourceTree = "<group>";
+		};
+		099ACB0E1A23560D00F568C0 /* Detail Decor */ = {
+			isa = PBXGroup;
+			children = (
+				099ACB0F1A23560D00F568C0 /* BACKBUTTON.png */,
+				099ACB101A23560D00F568C0 /* BACKBUTTONPUSH.png */,
+				099ACB111A23560D00F568C0 /* BARRETAG.png */,
+				099ACB121A23560D00F568C0 /* BLACKBUTTON.png */,
+				099ACB131A23560D00F568C0 /* CLASSIFICATION.png */,
+				099ACB141A23560D00F568C0 /* FACEBOOK.png */,
+				099ACB151A23560D00F568C0 /* FACEBOOKPUSH.png */,
+				099ACB161A23560D00F568C0 /* FLICKR.png */,
+				099ACB171A23560D00F568C0 /* FLICKRPUSH.png */,
+				099ACB181A23560D00F568C0 /* INSTAGRAM.png */,
+				099ACB191A23560D00F568C0 /* INSTAGRAMPUSH.png */,
+				099ACB1A1A23560D00F568C0 /* LOCALISATION.png */,
+				099ACB1B1A23560D00F568C0 /* OKBUTTON1.png */,
+				099ACB1C1A23560D00F568C0 /* OKBUTTONSANS.png */,
+				099ACB1D1A23560D00F568C0 /* PHOTOBUTTON.png */,
+				099ACB1E1A23560D00F568C0 /* PHOTOBUTTONPUSH.png */,
+				099ACB1F1A23560D00F568C0 /* PINTEREST.png */,
+				099ACB201A23560D00F568C0 /* PINTERESTPUSH.png */,
+				099ACB211A23560D00F568C0 /* RECHERCHELIEUTOURNAGE.png */,
+				099ACB221A23560D00F568C0 /* TWITTER.png */,
+				099ACB231A23560D00F568C0 /* TWITTERPUSH.png */,
+			);
+			path = "Detail Decor";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,23 +452,44 @@
 				099ACAD41A22AC5D00F568C0 /* buttonExit.png in Resources */,
 				099ACAFC1A2332B400F568C0 /* naval5.jpeg in Resources */,
 				099ACADB1A22AC5D00F568C0 /* buttonMapPushed.png in Resources */,
+				099ACB311A23560D00F568C0 /* OKBUTTONSANS.png in Resources */,
 				099ACAEE1A23130000F568C0 /* buttonHeartBlack.png in Resources */,
+				099ACB341A23560D00F568C0 /* PINTEREST.png in Resources */,
+				099ACB351A23560D00F568C0 /* PINTERESTPUSH.png in Resources */,
+				099ACB281A23560D00F568C0 /* CLASSIFICATION.png in Resources */,
 				099ACAB91A227D9500F568C0 /* launch.png in Resources */,
+				099ACB2F1A23560D00F568C0 /* LOCALISATION.png in Resources */,
+				099ACB2A1A23560D00F568C0 /* FACEBOOKPUSH.png in Resources */,
+				099ACB2E1A23560D00F568C0 /* INSTAGRAMPUSH.png in Resources */,
 				099ACAC91A229CFA00F568C0 /* loginScreen.png in Resources */,
 				095187EF1A22346000193100 /* Main.storyboard in Resources */,
+				099ACB291A23560D00F568C0 /* FACEBOOK.png in Resources */,
+				099ACB2D1A23560D00F568C0 /* INSTAGRAM.png in Resources */,
 				099ACAFA1A2332B400F568C0 /* naval3.jpeg in Resources */,
 				099ACAFD1A2332B400F568C0 /* naval6.jpeg in Resources */,
+				099ACB271A23560D00F568C0 /* BLACKBUTTON.png in Resources */,
 				099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */,
 				095187F41A22346000193100 /* LaunchScreen.xib in Resources */,
+				099ACB321A23560D00F568C0 /* PHOTOBUTTON.png in Resources */,
+				099ACB331A23560D00F568C0 /* PHOTOBUTTONPUSH.png in Resources */,
 				099ACAFE1A2332B400F568C0 /* naval7.jpeg in Resources */,
 				099ACAD81A22AC5D00F568C0 /* buttonPerso.png in Resources */,
+				099ACB241A23560D00F568C0 /* BACKBUTTON.png in Resources */,
+				099ACB251A23560D00F568C0 /* BACKBUTTONPUSH.png in Resources */,
 				099ACAE31A22B2C100F568C0 /* Antonio-Bold.ttf in Resources */,
+				099ACB381A23560D00F568C0 /* TWITTERPUSH.png in Resources */,
 				099ACADC1A22AC5D00F568C0 /* degradePhoto.png in Resources */,
+				099ACB2C1A23560D00F568C0 /* FLICKRPUSH.png in Resources */,
 				099ACAC61A229CFA00F568C0 /* facebookButtonPushed.png in Resources */,
+				099ACB301A23560D00F568C0 /* OKBUTTON1.png in Resources */,
 				099ACAEF1A23130000F568C0 /* buttonHeartWhite.png in Resources */,
 				099ACADA1A22AC5D00F568C0 /* buttonMap.png in Resources */,
 				099ACAF81A2332B400F568C0 /* naval1.jpeg in Resources */,
+				099ACB371A23560D00F568C0 /* TWITTER.png in Resources */,
+				099ACB2B1A23560D00F568C0 /* FLICKR.png in Resources */,
 				099ACAD51A22AC5D00F568C0 /* buttonExitPushed.png in Resources */,
+				099ACB261A23560D00F568C0 /* BARRETAG.png in Resources */,
+				099ACB361A23560D00F568C0 /* RECHERCHELIEUTOURNAGE.png in Resources */,
 				099ACAF91A2332B400F568C0 /* naval2.jpeg in Resources */,
 				099ACAC51A229CFA00F568C0 /* reaButtonPushed.png in Resources */,
 				099ACAC81A229CFA00F568C0 /* reaButton.png in Resources */,
@@ -421,6 +518,7 @@
 				099ACAE91A230F8F00F568C0 /* StartUpViewController.m in Sources */,
 				0951880F1A22500B00193100 /* MapViewController.m in Sources */,
 				095187E91A22346000193100 /* AppDelegate.m in Sources */,
+				099ACB0D1A2354CC00F568C0 /* DetailDecorViewController.m in Sources */,
 				099ACABF1A228D8100F568C0 /* DecorListViewController.m in Sources */,
 				099ACB041A23452D00F568C0 /* User.m in Sources */,
 				099ACB011A2332EB00F568C0 /* LieuDeTournage.m in Sources */,
