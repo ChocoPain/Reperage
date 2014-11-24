@@ -9,7 +9,6 @@
 #import "Classification.h"
 
 @interface Classification()
-@property (nonatomic, strong) NSString *title;
 @end
 
 @implementation Classification

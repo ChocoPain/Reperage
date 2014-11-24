@@ -26,8 +26,13 @@
 
 #pragma mark - Liking
 - (void) likeThisPlace:(LieuDeTournage*) lieu;
-- (BOOL) alreadyLikeThisPlace:(LieuDeTournage*) lieu;
+- (BOOL) alreadyLikedThisPlace:(LieuDeTournage*) lieu;
 
+#pragma mark - Classfification
+- (void) classificateThisPlace:(LieuDeTournage*) lieu withThisClassification:(NSString*) classification;
+
+#pragma mark - Owner
+-(void) ownerThisPlace:(LieuDeTournage*) lieu;
 
 #pragma mark - Listing
 

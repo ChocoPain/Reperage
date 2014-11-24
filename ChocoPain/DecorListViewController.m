@@ -107,7 +107,7 @@
     [heart addTarget:self action:@selector(favoriteButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [heart setTitle:[NSString stringWithFormat:@"%i",l1.likes] forState:UIControlStateNormal];
     
-    if([[Services shared] alreadyLikeThisPlace:l1])
+    if([[Services shared] alreadyLikedThisPlace:l1])
     {
         [heart setBackgroundImage:[UIImage imageNamed:@"buttonHeartRed.png"] forState:UIControlStateNormal];
     }

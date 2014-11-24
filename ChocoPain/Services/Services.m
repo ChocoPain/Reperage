@@ -70,7 +70,7 @@
     }
 }
 
-- (BOOL) alreadyLikeThisPlace:(LieuDeTournage*) lieu
+- (BOOL) alreadyLikedThisPlace:(LieuDeTournage*) lieu
 {
     for (LieuDeTournage *l in self.cacheListe) {
         if(l.numberId == lieu.numberId)
@@ -88,6 +88,33 @@
     return NO;
 }
 
+- (void) classificateThisPlace:(LieuDeTournage*) lieu withThisClassification:(NSString*) classification
+{
+    for (LieuDeTournage *l in self.cacheListe) {
+        if(l.numberId == lieu.numberId)
+        {
+            if([l.classifications containsObject:classification])
+            {
+                [l.classifications removeObject:classification];
+            }
+            else
+            {
+                [l.classifications addObject:classification];
+            }
+        }
+    }
+}
+
+-(void) ownerThisPlace:(LieuDeTournage*) lieu
+{
+    for (LieuDeTournage *l in self.cacheListe) {
+        if(l.numberId == lieu.numberId)
+        {
+            l.owner = !l.owner;
+        }
+    }
+}
+
 #pragma mark - Listing
 
 - (void) getNewsWithHandler:(void (^)(NSArray* result, NSError *error)) completionBlock
@@ -98,19 +125,20 @@
         l1.numberId = 1;
         l1.imagesName = [NSArray arrayWithObjects:@"naval1.jpeg", @"naval2.jpeg", @"naval4.jpeg", nil];
         l1.likes = 3;
-        l1.classifications = [NSArray arrayWithObjects:@"Transport maritime/fluvial", nil];
+        l1.classifications = [NSMutableArray arrayWithObjects:@"Transport maritime/fluvial", nil];
+        l1.owner = YES;
         
         LieuDeTournage *l2 = [[LieuDeTournage alloc] init];
         l2.numberId = 2;
         l2.imagesName = [NSArray arrayWithObjects:@"naval3.jpeg", @"naval4.jpeg", nil];
         l2.likes = 1;
-        l2.classifications = [NSArray arrayWithObjects:@"Appartement", nil];
+        l2.classifications = [NSMutableArray arrayWithObjects:@"Appartement", nil];
         
         LieuDeTournage *l3 = [[LieuDeTournage alloc] init];
         l3.numberId = 3;
         l3.imagesName = [NSArray arrayWithObjects:@"naval4.jpeg", @"naval5.jpeg", nil];
         l3.likes = 0;
-        l3.classifications = [NSArray arrayWithObjects:@"Case", nil];
+        l3.classifications = [NSMutableArray arrayWithObjects:@"Case", nil];
         
         self.cacheListe = [NSArray arrayWithObjects:l1, l2, l3, nil];
         

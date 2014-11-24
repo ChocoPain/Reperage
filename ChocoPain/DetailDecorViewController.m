@@ -7,14 +7,14 @@
 //
 
 #import "DetailDecorViewController.h"
+#import "ClassificationsViewController.h"
+#import "Services.h"
 
-@interface DetailDecorViewController () <UIImagePickerControllerDelegate>
-{
-    UIImagePickerController *imgPicker;
-}
+@interface DetailDecorViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) UIImagePickerController *imgPicker;
+@property (weak, nonatomic) IBOutlet UIButton *ownerButton;
 
 @end
 
@@ -48,7 +48,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
     [label setFont:[UIFont fontWithName:@"Antonio-Regular" size:17.f]];
     [label setTextColor:[UIColor whiteColor]];
-    [label setText:@"Détail"];
+    [label setText:@"DÉTAIL"];
     [label setTextAlignment:NSTextAlignmentCenter];
     [view addSubview:label];
     
@@ -56,10 +56,8 @@
     
     
     self.imgPicker = [[UIImagePickerController alloc] init];
-    self.imgPicker.allowsImageEditing = YES;
+    self.imgPicker.allowsEditing = YES;
     self.imgPicker.delegate = self;
-    self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
     
 }
 
@@ -72,7 +70,23 @@
 {
     [super viewWillAppear:animated];
     
+    
+    [self initialized];
+}
+
+- (void) initialized
+{
     [self displayImages];
+    
+    if(self.lieu.owner)
+    {
+        [self.ownerButton setImage:[UIImage imageNamed:@"OKBUTTON"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.ownerButton setImage:[UIImage imageNamed:@"OKBUTTONSANS"] forState:UIControlStateNormal];
+    }
+    
 }
 
 - (void) displayImages
@@ -81,7 +95,7 @@
     for (NSString *imageName in self.lieu.imagesName) {
         UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
         
-        [imageV setFrame:CGRectMake(10+count*150, 5, 120, 120)];    
+        [imageV setFrame:CGRectMake(10+count*150, 5, 120, 120)];
         
         
         [self.scrollView addSubview:imageV];
@@ -100,17 +114,50 @@
 
 - (void) addPhoto:(id) sender
 {
-    [self presentViewController:self.imgPicker animated:YES completion:^{
-        //
-    }];
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Selectionner l'image source" delegate:self cancelButtonTitle:@"Annuler" destructiveButtonTitle:nil otherButtonTitles:@"Appariel photo", @"Photothèque", nil];
+        actionSheet.tag = 1;
+        [actionSheet showInView:self.view];
+    }
+    else
+    {
+        self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:self.imgPicker animated:YES completion:^{
+            //
+        }];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"toClassification"]) {
+        ClassificationsViewController *vc = [segue destinationViewController];
+        vc.lieu = self.lieu;
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==0)
+    {
+        self.imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:self.imgPicker animated:YES completion:^{
+            //
+        }];
+    }
+    else
+    {
+        self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:self.imgPicker animated:YES completion:^{
+            //
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (IBAction)localisationButtonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"toMap" sender:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)img editingInfo:(NSDictionary *)editInfo {
@@ -118,6 +165,20 @@
     [self dismissViewControllerAnimated:YES completion:^{
         //
     }];
+}
+- (IBAction)ownerButtonClicked:(id)sender {
+    
+    [[Services shared] ownerThisPlace:self.lieu];
+    
+    if(self.lieu.owner)
+    {
+        [self.ownerButton setImage:[UIImage imageNamed:@"OKBUTTON"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.ownerButton setImage:[UIImage imageNamed:@"OKBUTTONSANS"] forState:UIControlStateNormal];
+    }
+    
 }
 
 /*

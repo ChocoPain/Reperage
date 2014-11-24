@@ -13,7 +13,7 @@
 
 @property (nonatomic) int numberId;
 @property (nonatomic) CLLocation *location;
-@property (nonatomic, strong) NSArray* classifications;
+@property (nonatomic, strong) NSMutableArray* classifications;
 @property (nonatomic, strong) NSString *commentaire;
 @property (nonatomic) BOOL owner;
 @property (nonatomic, strong) NSArray* imagesName;

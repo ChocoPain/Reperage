@@ -11,6 +11,7 @@
 @interface Classification : NSObject
 
 @property (nonatomic, strong) NSArray *children;
+@property (nonatomic, strong) NSString *title;
 
 - (instancetype)initWithTitle:(NSString*) title andChildren:(NSArray*) children;
 
