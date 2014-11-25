@@ -460,6 +460,7 @@
                                                 <state key="highlighted" image="TWITTERPUSH.png"/>
                                                 <connections>
                                                     <action selector="twitterButtonPressed:" destination="DGT-y8-N0m" eventType="touchUpInside" id="iCq-Ou-Y6p"/>
+                                                    <action selector="twitterPressed:" destination="L5g-Ay-5f1" eventType="touchUpInside" id="UFG-F0-GN2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3e-el-W1l">

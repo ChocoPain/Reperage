@@ -79,6 +79,7 @@
 		09A8A7621A23C91300E2F39D /* PAGEPROJETMODIF.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7611A23C91300E2F39D /* PAGEPROJETMODIF.png */; };
 		09A8A7641A23CC7600E2F39D /* pageconnexion.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7631A23CC7600E2F39D /* pageconnexion.png */; };
 		09A8A7671A23CD2600E2F39D /* InscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8A7661A23CD2600E2F39D /* InscriptionViewController.m */; };
+		09A8A7691A240AFB00E2F39D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A8A7681A240AFB00E2F39D /* Twitter.framework */; };
 		09D67E431A23BED1004CE2C7 /* PAGEPROJET.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */; };
 		09D67E451A23C077004CE2C7 /* PAGEDEMANDE.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */; };
 /* End PBXBuildFile section */
@@ -174,6 +175,7 @@
 		09A8A7631A23CC7600E2F39D /* pageconnexion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pageconnexion.png; path = "Detail Decor/pageconnexion.png"; sourceTree = "<group>"; };
 		09A8A7651A23CD2600E2F39D /* InscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InscriptionViewController.h; sourceTree = "<group>"; };
 		09A8A7661A23CD2600E2F39D /* InscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InscriptionViewController.m; sourceTree = "<group>"; };
+		09A8A7681A240AFB00E2F39D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGEPROJET.png; sourceTree = "<group>"; };
 		09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGEDEMANDE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A8A7691A240AFB00E2F39D /* Twitter.framework in Frameworks */,
 				095188111A22540500193100 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +208,7 @@
 		095187D71A22346000193100 = {
 			isa = PBXGroup;
 			children = (
+				09A8A7681A240AFB00E2F39D /* Twitter.framework */,
 				095187E21A22346000193100 /* ChocoPain */,
 				095187FC1A22346000193100 /* ChocoPainTests */,
 				095187E11A22346000193100 /* Products */,

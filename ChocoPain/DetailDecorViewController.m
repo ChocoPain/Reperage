@@ -11,6 +11,8 @@
 #import "MapViewController.h"
 #import "Services.h"
 
+#import <Twitter/Twitter.h>
+
 @interface DetailDecorViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -279,6 +281,46 @@
 {
     [textField resignFirstResponder];
     return YES;
+}
+- (IBAction)twitterPressed:(id)sender {
+    
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        
+        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
+            if (result == SLComposeViewControllerResultCancelled) {
+                
+                NSLog(@"Cancelled");
+                
+            } else
+                
+            {
+                NSLog(@"Done");
+            }
+            
+            [controller dismissViewControllerAnimated:YES completion:Nil];
+        };
+        controller.completionHandler =myBlock;
+        
+        //Adding the Text to the facebook post value from iOS
+        [controller setInitialText:@"Regarde cette magnifique photo..."];
+        
+        //Adding the URL to the facebook post value from iOS
+        
+        [controller addURL:[NSURL URLWithString:@"http://www.reperage.org"]];
+        
+        //Adding the Image to the facebook post value from iOS
+        
+        [controller addImage:[UIImage imageNamed:self.lieu.mainImageName]];
+        
+        
+        [self presentViewController:controller animated:YES completion:Nil];
+        
+    }
+    else{
+        NSLog(@"UnAvailable");
+    }
 }
 
 /*
