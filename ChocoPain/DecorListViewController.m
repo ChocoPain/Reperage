@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray* liste;
 
+@property (nonatomic) BOOL private;
+
 @end
 
 @implementation DecorListViewController
@@ -33,6 +35,11 @@
 {
     [super viewWillAppear:animated];
     
+    [self initializing];
+}
+
+- (void) initializing
+{
     if(self.back == NO)
     {
         UIButton *buttonL = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -71,16 +78,69 @@
     [barButton setCustomView:button];
     self.navigationItem.rightBarButtonItem=barButton;
     
+    UIButton *buttonP = [UIButton buttonWithType:UIButtonTypeCustom];
+    buttonP.frame = CGRectMake(0, 0, 20, 22);
+    //button.backgroundColor = [UIColor redColor];
+    [buttonP setImage:[UIImage imageNamed:@"buttonPerso.png"] forState:UIControlStateNormal];
+    [buttonP setImage:[UIImage imageNamed:@"buttonPersoPushed.png"] forState:UIControlStateHighlighted];
+    [buttonP addTarget:self action:@selector(myAccount:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *barButtonP=[[UIBarButtonItem alloc] init];
+    [barButtonP setCustomView:buttonP];
+    [self.navigationItem setRightBarButtonItems:@[barButtonP, barButton]];
+    
+    
     //[Services shared]
     [self.navigationController setNavigationBarHidden:NO];
     [self.navigationController.navigationBar setBackgroundColor:[UIColor blackColor]];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
     
-    [[Services shared] getNewsWithHandler:^(NSArray *result, NSError *error) {
-        self.liste = result;
-        [self.tableView reloadData];
-    }];
-
+    if(self.private)
+    {
+        UIButton *buttonE = [UIButton buttonWithType:UIButtonTypeCustom];
+        buttonE.frame = CGRectMake(0, 0, 20, 22);
+        //button.backgroundColor = [UIColor redColor];
+        [buttonE setImage:[UIImage imageNamed:@"+.png"] forState:UIControlStateNormal];
+        [buttonE addTarget:self action:@selector(addDecor:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *barButtonE=[[UIBarButtonItem alloc] init];
+        [barButtonE setCustomView:buttonE];
+        [self.navigationItem setRightBarButtonItem:barButtonE];
+        
+        [[Services shared] getPersoListWithHandler:^(NSArray *result, NSError *error) {
+            self.liste = result;
+            [self.tableView reloadData];
+        }];
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        //[view setBackgroundColor:[UIColor redColor]];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        [label setFont:[UIFont fontWithName:@"Antonio-Regular" size:17.f]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"MON COMPTE"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [view addSubview:label];
+        
+        [self.navigationItem setTitleView:view];
+    }
+    else
+    {
+        [[Services shared] getNewsWithHandler:^(NSArray *result, NSError *error) {
+            self.liste = result;
+            [self.tableView reloadData];
+        }];
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        //[view setBackgroundColor:[UIColor redColor]];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        [label setFont:[UIFont fontWithName:@"Antonio-Regular" size:17.f]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setText:@"ACTUALITÉ"];
+        [label setTextAlignment:NSTextAlignmentCenter];
+        [view addSubview:label];
+        
+        [self.navigationItem setTitleView:view];
+    }
 }
 
 - (void) exit:(id) sender
@@ -96,7 +156,19 @@
 
 - (void) addDecor:(id) sender
 {
-    
+    [self performSegueWithIdentifier:@"toDetail" sender:sender];
+}
+
+- (void) myAccount:(id) sender
+{
+    [self refreshMode];
+}
+
+- (void) refreshMode
+{
+    self.back = YES;
+    self.private = YES;
+    [self initializing];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -154,11 +226,20 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"toDetail"]) {
-        NSLog(@"row : %lu", ((NSIndexPath*) sender).row);
+        //NSLog(@"row : %lu", ((NSIndexPath*) sender).row);
         
         DetailDecorViewController *vc = [segue destinationViewController];
-        vc.lieu =[self.liste objectAtIndex:((NSIndexPath*) sender).row];
         
+        if([sender isKindOfClass:[NSIndexPath class]])
+        {
+            vc.lieu =[self.liste objectAtIndex:((NSIndexPath*) sender).row];
+        }
+        else
+        {
+            vc.lieu = [[LieuDeTournage alloc] init];
+        }
+            
+        vc.editable = self.private;
     }
 }
 

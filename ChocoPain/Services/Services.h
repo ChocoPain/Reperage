@@ -20,6 +20,8 @@
 #pragma mark - News
 - (void) getNewsWithHandler:(void (^)(NSArray* result, NSError *error)) completionBlock;
 
+- (void) getPersoListWithHandler:(void (^)(NSArray* result, NSError *error)) completionBlock;
+
 #pragma mark - Login/logoff
 - (void) loginWithUserName:(NSString *) string andPassword:(NSString*) password withHandler:(void (^)(BOOL result, NSError *error))completionBlock;
 - (void) logoff;

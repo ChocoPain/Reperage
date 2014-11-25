@@ -80,6 +80,21 @@
 		09A8A7641A23CC7600E2F39D /* pageconnexion.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7631A23CC7600E2F39D /* pageconnexion.png */; };
 		09A8A7671A23CD2600E2F39D /* InscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A8A7661A23CD2600E2F39D /* InscriptionViewController.m */; };
 		09A8A7691A240AFB00E2F39D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A8A7681A240AFB00E2F39D /* Twitter.framework */; };
+		09A8A77B1A2488C700E2F39D /* sport1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A76B1A2488C700E2F39D /* sport1.jpg */; };
+		09A8A77C1A2488C700E2F39D /* sport2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A76C1A2488C700E2F39D /* sport2.jpg */; };
+		09A8A77D1A2488C700E2F39D /* sport3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A76D1A2488C700E2F39D /* sport3.jpg */; };
+		09A8A77E1A2488C700E2F39D /* sport4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A76E1A2488C700E2F39D /* sport4.jpg */; };
+		09A8A77F1A2488C700E2F39D /* sport5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A76F1A2488C700E2F39D /* sport5.jpg */; };
+		09A8A7801A2488C700E2F39D /* sport6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7701A2488C700E2F39D /* sport6.jpg */; };
+		09A8A7811A2488C700E2F39D /* plage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7721A2488C700E2F39D /* plage1.jpg */; };
+		09A8A7821A2488C700E2F39D /* plage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7731A2488C700E2F39D /* plage2.jpg */; };
+		09A8A7831A2488C700E2F39D /* plage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7741A2488C700E2F39D /* plage3.jpg */; };
+		09A8A7841A2488C700E2F39D /* jeux1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7761A2488C700E2F39D /* jeux1.jpg */; };
+		09A8A7851A2488C700E2F39D /* jeux2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7771A2488C700E2F39D /* jeux2.jpg */; };
+		09A8A7861A2488C700E2F39D /* jeux3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7781A2488C700E2F39D /* jeux3.jpg */; };
+		09A8A7871A2488C700E2F39D /* jeux4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7791A2488C700E2F39D /* jeux4.jpg */; };
+		09A8A7881A2488C700E2F39D /* jeux5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A77A1A2488C700E2F39D /* jeux5.jpg */; };
+		09A8A78A1A248E0900E2F39D /* +.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A8A7891A248E0900E2F39D /* +.png */; };
 		09D67E431A23BED1004CE2C7 /* PAGEPROJET.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */; };
 		09D67E451A23C077004CE2C7 /* PAGEDEMANDE.png in Resources */ = {isa = PBXBuildFile; fileRef = 09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */; };
 /* End PBXBuildFile section */
@@ -176,6 +191,21 @@
 		09A8A7651A23CD2600E2F39D /* InscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InscriptionViewController.h; sourceTree = "<group>"; };
 		09A8A7661A23CD2600E2F39D /* InscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InscriptionViewController.m; sourceTree = "<group>"; };
 		09A8A7681A240AFB00E2F39D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		09A8A76B1A2488C700E2F39D /* sport1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sport1.jpg; sourceTree = "<group>"; };
+		09A8A76C1A2488C700E2F39D /* sport2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sport2.jpg; sourceTree = "<group>"; };
+		09A8A76D1A2488C700E2F39D /* sport3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sport3.jpg; sourceTree = "<group>"; };
+		09A8A76E1A2488C700E2F39D /* sport4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sport4.jpg; sourceTree = "<group>"; };
+		09A8A76F1A2488C700E2F39D /* sport5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sport5.jpg; sourceTree = "<group>"; };
+		09A8A7701A2488C700E2F39D /* sport6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sport6.jpg; sourceTree = "<group>"; };
+		09A8A7721A2488C700E2F39D /* plage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plage1.jpg; sourceTree = "<group>"; };
+		09A8A7731A2488C700E2F39D /* plage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plage2.jpg; sourceTree = "<group>"; };
+		09A8A7741A2488C700E2F39D /* plage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plage3.jpg; sourceTree = "<group>"; };
+		09A8A7761A2488C700E2F39D /* jeux1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeux1.jpg; sourceTree = "<group>"; };
+		09A8A7771A2488C700E2F39D /* jeux2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeux2.jpg; sourceTree = "<group>"; };
+		09A8A7781A2488C700E2F39D /* jeux3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeux3.jpg; sourceTree = "<group>"; };
+		09A8A7791A2488C700E2F39D /* jeux4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeux4.jpg; sourceTree = "<group>"; };
+		09A8A77A1A2488C700E2F39D /* jeux5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jeux5.jpg; sourceTree = "<group>"; };
+		09A8A7891A248E0900E2F39D /* +.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "+.png"; sourceTree = "<group>"; };
 		09D67E421A23BED1004CE2C7 /* PAGEPROJET.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGEPROJET.png; sourceTree = "<group>"; };
 		09D67E441A23C077004CE2C7 /* PAGEDEMANDE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAGEDEMANDE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -312,6 +342,9 @@
 			children = (
 				092D30441A23B8230089FDDB /* FakeImage */,
 				099ACAF01A2332B400F568C0 /* Chantier Naval */,
+				09A8A76A1A2488C700E2F39D /* Installation sportive */,
+				09A8A7711A2488C700E2F39D /* Plage */,
+				09A8A7751A2488C700E2F39D /* Plaine de jeux */,
 				099ACACA1A22AC4B00F568C0 /* DecorList */,
 				099ACB0E1A23560D00F568C0 /* Detail Decor */,
 				09A8A7631A23CC7600E2F39D /* pageconnexion.png */,
@@ -330,6 +363,7 @@
 		099ACACA1A22AC4B00F568C0 /* DecorList */ = {
 			isa = PBXGroup;
 			children = (
+				09A8A7891A248E0900E2F39D /* +.png */,
 				099ACAEA1A23130000F568C0 /* buttonHeartRed.png */,
 				099ACAEB1A23130000F568C0 /* buttonHeartBlack.png */,
 				099ACAEC1A23130000F568C0 /* buttonHeartWhite.png */,
@@ -396,6 +430,41 @@
 			path = "Detail Decor";
 			sourceTree = "<group>";
 		};
+		09A8A76A1A2488C700E2F39D /* Installation sportive */ = {
+			isa = PBXGroup;
+			children = (
+				09A8A76B1A2488C700E2F39D /* sport1.jpg */,
+				09A8A76C1A2488C700E2F39D /* sport2.jpg */,
+				09A8A76D1A2488C700E2F39D /* sport3.jpg */,
+				09A8A76E1A2488C700E2F39D /* sport4.jpg */,
+				09A8A76F1A2488C700E2F39D /* sport5.jpg */,
+				09A8A7701A2488C700E2F39D /* sport6.jpg */,
+			);
+			path = "Installation sportive";
+			sourceTree = "<group>";
+		};
+		09A8A7711A2488C700E2F39D /* Plage */ = {
+			isa = PBXGroup;
+			children = (
+				09A8A7721A2488C700E2F39D /* plage1.jpg */,
+				09A8A7731A2488C700E2F39D /* plage2.jpg */,
+				09A8A7741A2488C700E2F39D /* plage3.jpg */,
+			);
+			path = Plage;
+			sourceTree = "<group>";
+		};
+		09A8A7751A2488C700E2F39D /* Plaine de jeux */ = {
+			isa = PBXGroup;
+			children = (
+				09A8A7761A2488C700E2F39D /* jeux1.jpg */,
+				09A8A7771A2488C700E2F39D /* jeux2.jpg */,
+				09A8A7781A2488C700E2F39D /* jeux3.jpg */,
+				09A8A7791A2488C700E2F39D /* jeux4.jpg */,
+				09A8A77A1A2488C700E2F39D /* jeux5.jpg */,
+			);
+			path = "Plaine de jeux";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,22 +526,29 @@
 				099ACAC71A229CFA00F568C0 /* facebookButton.png in Resources */,
 				099ACAD91A22AC5D00F568C0 /* buttonPersoPushed.png in Resources */,
 				099ACAE21A22B2C100F568C0 /* Antonio-Regular.ttf in Resources */,
+				09A8A7851A2488C700E2F39D /* jeux2.jpg in Resources */,
 				099ACAD41A22AC5D00F568C0 /* buttonExit.png in Resources */,
+				09A8A7831A2488C700E2F39D /* plage3.jpg in Resources */,
 				099ACAFC1A2332B400F568C0 /* naval5.jpeg in Resources */,
 				099ACADB1A22AC5D00F568C0 /* buttonMapPushed.png in Resources */,
 				099ACB311A23560D00F568C0 /* OKBUTTONSANS.png in Resources */,
+				09A8A77F1A2488C700E2F39D /* sport5.jpg in Resources */,
 				099ACAEE1A23130000F568C0 /* buttonHeartBlack.png in Resources */,
+				09A8A77D1A2488C700E2F39D /* sport3.jpg in Resources */,
 				092D30421A23B51E0089FDDB /* boutoninscription.png in Resources */,
 				099ACB341A23560D00F568C0 /* PINTEREST.png in Resources */,
 				099ACB351A23560D00F568C0 /* PINTERESTPUSH.png in Resources */,
 				099ACB281A23560D00F568C0 /* CLASSIFICATION.png in Resources */,
 				099ACAB91A227D9500F568C0 /* launch.png in Resources */,
 				09D67E451A23C077004CE2C7 /* PAGEDEMANDE.png in Resources */,
+				09A8A77E1A2488C700E2F39D /* sport4.jpg in Resources */,
 				09A8A7641A23CC7600E2F39D /* pageconnexion.png in Resources */,
 				099ACB2F1A23560D00F568C0 /* LOCALISATION.png in Resources */,
 				099ACB2A1A23560D00F568C0 /* FACEBOOKPUSH.png in Resources */,
 				099ACB2E1A23560D00F568C0 /* INSTAGRAMPUSH.png in Resources */,
 				099ACAC91A229CFA00F568C0 /* loginScreen.png in Resources */,
+				09A8A77C1A2488C700E2F39D /* sport2.jpg in Resources */,
+				09A8A7871A2488C700E2F39D /* jeux4.jpg in Resources */,
 				095187EF1A22346000193100 /* Main.storyboard in Resources */,
 				099ACB291A23560D00F568C0 /* FACEBOOK.png in Resources */,
 				099ACB2D1A23560D00F568C0 /* INSTAGRAM.png in Resources */,
@@ -480,23 +556,30 @@
 				099ACAFD1A2332B400F568C0 /* naval6.jpeg in Resources */,
 				099ACB271A23560D00F568C0 /* BLACKBUTTON.png in Resources */,
 				099ACAE11A22B2C100F568C0 /* Antonio-Light.ttf in Resources */,
+				09A8A7881A2488C700E2F39D /* jeux5.jpg in Resources */,
 				092D30461A23B83E0089FDDB /* PAGESECTIONS.png in Resources */,
 				09A8A7601A23C6D700E2F39D /* PAGERECHERCHE.png in Resources */,
 				09D67E431A23BED1004CE2C7 /* PAGEPROJET.png in Resources */,
 				095187F41A22346000193100 /* LaunchScreen.xib in Resources */,
 				099ACB321A23560D00F568C0 /* PHOTOBUTTON.png in Resources */,
 				099ACB331A23560D00F568C0 /* PHOTOBUTTONPUSH.png in Resources */,
+				09A8A7811A2488C700E2F39D /* plage1.jpg in Resources */,
 				099ACAFE1A2332B400F568C0 /* naval7.jpeg in Resources */,
 				099ACAD81A22AC5D00F568C0 /* buttonPerso.png in Resources */,
 				092D30431A23B51E0089FDDB /* boutoninscriptionpush.png in Resources */,
+				09A8A7841A2488C700E2F39D /* jeux1.jpg in Resources */,
+				09A8A7801A2488C700E2F39D /* sport6.jpg in Resources */,
 				099ACB241A23560D00F568C0 /* BACKBUTTON.png in Resources */,
+				09A8A77B1A2488C700E2F39D /* sport1.jpg in Resources */,
 				099ACB251A23560D00F568C0 /* BACKBUTTONPUSH.png in Resources */,
+				09A8A78A1A248E0900E2F39D /* +.png in Resources */,
 				099ACAE31A22B2C100F568C0 /* Antonio-Bold.ttf in Resources */,
 				099ACB381A23560D00F568C0 /* TWITTERPUSH.png in Resources */,
 				099ACADC1A22AC5D00F568C0 /* degradePhoto.png in Resources */,
 				099ACB2C1A23560D00F568C0 /* FLICKRPUSH.png in Resources */,
 				099ACAC61A229CFA00F568C0 /* facebookButtonPushed.png in Resources */,
 				099ACB301A23560D00F568C0 /* OKBUTTON.png in Resources */,
+				09A8A7821A2488C700E2F39D /* plage2.jpg in Resources */,
 				099ACAEF1A23130000F568C0 /* buttonHeartWhite.png in Resources */,
 				099ACADA1A22AC5D00F568C0 /* buttonMap.png in Resources */,
 				099ACAF81A2332B400F568C0 /* naval1.jpeg in Resources */,
@@ -504,6 +587,7 @@
 				099ACB2B1A23560D00F568C0 /* FLICKR.png in Resources */,
 				099ACAD51A22AC5D00F568C0 /* buttonExitPushed.png in Resources */,
 				099ACB261A23560D00F568C0 /* BARRETAG.png in Resources */,
+				09A8A7861A2488C700E2F39D /* jeux3.jpg in Resources */,
 				099ACB361A23560D00F568C0 /* RECHERCHELIEUTOURNAGE.png in Resources */,
 				09A8A7621A23C91300E2F39D /* PAGEPROJETMODIF.png in Resources */,
 				099ACAF91A2332B400F568C0 /* naval2.jpeg in Resources */,
