@@ -84,6 +84,8 @@
         AdoptingAnAnnotation *annot = [[AdoptingAnAnnotation alloc] initWithCoordinate:touchMapCoordinate];
         [self.mapView removeAnnotations:self.mapView.annotations];
         [self.mapView addAnnotation:annot];
+        
+        [self.mapView setCenterCoordinate:touchMapCoordinate];
     }
 }
 
@@ -111,6 +113,7 @@
     [self.mapView addAnnotation:annot];
     
     CLLocation *location = [[CLLocation alloc] initWithLatitude:touchMapCoordinate.latitude longitude:touchMapCoordinate.longitude];
+    NSLog(@"LOCATIOn : %@", location);
     [[Services shared] addLocationForThisPlace:self.lieu location:location];
 }
 

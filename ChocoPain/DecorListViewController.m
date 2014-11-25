@@ -196,6 +196,11 @@
     UIImageView *mainImageView = (UIImageView *)[cell.contentView viewWithTag:3];
     [mainImageView setImage:[Services convertImageToGrayScale:[UIImage imageNamed:l1.mainImageName]]];
     
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = 0.5;
+    [mainImageView addGestureRecognizer:lpgr];
+    
     UIButton *heart = (UIButton *)[cell.contentView viewWithTag:2];
     [heart addTarget:self action:@selector(favoriteButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [heart setTitle:[NSString stringWithFormat:@"%i",l1.likes] forState:UIControlStateNormal];
@@ -216,6 +221,18 @@
 
     
     return cell;
+}
+
+- (void)handleLongPress:(UILongPressGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        
+        NSLog(@"Long press Ended");
+    }
+    else {
+        UIImageView *imageVi = ((UIImageView*) sender);
+        
+        NSLog(@"Long press detected.");
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -514,11 +514,48 @@
                         <outlet property="mainScrollView" destination="6Lh-1c-fS7" id="xTf-r8-TVV"/>
                         <outlet property="ownerButton" destination="158-jO-pDm" id="qcU-Ga-laU"/>
                         <outlet property="scrollView" destination="1jH-fD-Wxd" id="bgo-MI-ITi"/>
+                        <segue destination="nNF-0F-Ahk" kind="show" identifier="toPhoto" id="S8k-VN-Kqg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0E-t1-62z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1782.5" y="92.5"/>
+        </scene>
+        <!--Photo Viewer View Controller-->
+        <scene sceneID="bbw-gj-deb">
+            <objects>
+                <viewController id="nNF-0F-Ahk" customClass="PhotoViewerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l0t-Ea-Y4T"/>
+                        <viewControllerLayoutGuide type="bottom" id="8ca-ea-IbO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uKn-B5-3Et">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGK-Hg-M1k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="bDm-Wj-7es"/>
+                                    <constraint firstAttribute="height" constant="667" id="jCG-wE-AR6"/>
+                                </constraints>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YGK-Hg-M1k" firstAttribute="leading" secondItem="uKn-B5-3Et" secondAttribute="leadingMargin" constant="-16" id="4Jj-dL-xpB"/>
+                            <constraint firstItem="YGK-Hg-M1k" firstAttribute="top" secondItem="l0t-Ea-Y4T" secondAttribute="bottom" constant="-64" id="XT5-WG-p43"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="YGK-Hg-M1k" id="j50-3u-dqS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tv-AK-apZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751.5" y="-764.5"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="swF-iq-4uV">

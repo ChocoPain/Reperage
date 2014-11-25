@@ -10,6 +10,7 @@
 #import "ClassificationsViewController.h"
 #import "MapViewController.h"
 #import "Services.h"
+#import "PhotoViewerViewController.h"
 
 #import <Twitter/Twitter.h>
 
@@ -145,10 +146,16 @@
     }
     
     for (NSString *imageName in self.lieu.imagesName) {
-        UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
         
-        [imageV setFrame:CGRectMake(20+count*130, 5, 120, 120)];
-        [self.scrollView addSubview:imageV];
+//        UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+//        [imageV setFrame:CGRectMake(20+count*130, 5, 120, 120)];
+//        [self.scrollView addSubview:imageV];
+        
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20+count*130, 5, 120, 120)];
+        [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(showPhoto:) forControlEvents:UIControlEventTouchUpInside];
+        [self.scrollView addSubview:button];
+        [button setTag:count];
         count++;
     }
     count--;
@@ -182,6 +189,11 @@
     self.mainScrollView.scrollIndicatorInsets = contentInsets;
 }
 
+- (void) showPhoto:(id) sender
+{
+    [self performSegueWithIdentifier:@"toPhoto" sender:sender];
+}
+
 - (void) addPhoto:(id) sender
 {
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
@@ -208,6 +220,19 @@
     else if ([[segue identifier] isEqualToString:@"toMap"]) {
         MapViewController *vc = [segue destinationViewController];
         vc.lieu = self.lieu;
+    }
+    else if ([[segue identifier] isEqualToString:@"toPhoto"]) {
+        PhotoViewerViewController *vc = [segue destinationViewController];
+        vc.image = ((UIButton*) sender).imageView.image;
+        
+        if(self.editable)
+        {
+            vc.imageName = [self.lieu.imagesName objectAtIndex:((UIButton*) sender).tag-1];
+        }
+        else
+        {
+            vc.imageName = [self.lieu.imagesName objectAtIndex:((UIButton*) sender).tag];
+        }
     }
 }
 
