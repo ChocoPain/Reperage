@@ -8,6 +8,7 @@
 
 #import "DetailDecorViewController.h"
 #import "ClassificationsViewController.h"
+#import "MapViewController.h"
 #import "Services.h"
 
 @interface DetailDecorViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate, UITextFieldDelegate>
@@ -125,14 +126,22 @@
 
 - (void) displayImages
 {
+    for (UIView *child in self.scrollView.subviews) {
+        [child removeFromSuperview];
+    }
+    
     int count = 0;
+
+    if(self.editable)
+    {
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20+count*130, 5, 120, 120)];
+        [button setImage:[UIImage imageNamed:@"PHOTOBUTTON.png"] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(addPhoto:) forControlEvents:UIControlEventTouchUpInside];
+        [self.scrollView addSubview:button];
+        
+        count++;
+    }
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20+count*130, 5, 120, 120)];
-    [button setImage:[UIImage imageNamed:@"PHOTOBUTTON.png"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(addPhoto:) forControlEvents:UIControlEventTouchUpInside];
-    [self.scrollView addSubview:button];
-    
-    count++;
     for (NSString *imageName in self.lieu.imagesName) {
         UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
         
@@ -142,7 +151,7 @@
     }
     count--;
     
-    self.scrollView.contentSize = CGSizeMake(135 * (self.lieu.imagesName.count+1), 130);
+    self.scrollView.contentSize = CGSizeMake(135 * (self.lieu.imagesName.count+((self.editable)?1:0)), 130);
 
 }
 
@@ -192,6 +201,10 @@
 {
     if ([[segue identifier] isEqualToString:@"toClassification"]) {
         ClassificationsViewController *vc = [segue destinationViewController];
+        vc.lieu = self.lieu;
+    }
+    else if ([[segue identifier] isEqualToString:@"toMap"]) {
+        MapViewController *vc = [segue destinationViewController];
         vc.lieu = self.lieu;
     }
 }

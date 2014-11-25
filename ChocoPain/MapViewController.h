@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LieuDeTournage.h"
 
 @interface MapViewController : UIViewController
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) LieuDeTournage *lieu;
+
 
 @end

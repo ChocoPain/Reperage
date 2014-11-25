@@ -135,6 +135,16 @@
     }
 }
 
+- (void)addLocationForThisPlace:(LieuDeTournage *)lieu location:(CLLocation *)location
+{
+    for (LieuDeTournage *l in self.cacheListe) {
+        if(l.numberId == lieu.numberId)
+        {
+            l.location = location;
+        }
+    }
+}
+
 
 #pragma mark - Listing
 

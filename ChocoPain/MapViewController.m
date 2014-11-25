@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 
 #import "AdoptingAnAnnotation.h"
+#import "Services.h"
 
 #import <MapKit/MapKit.h>
 
@@ -73,8 +74,17 @@
     
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
                                           initWithTarget:self action:@selector(handleLongPress:)];
-    lpgr.minimumPressDuration = 0.0;
+    lpgr.minimumPressDuration = 0.5;
     [self.mapView addGestureRecognizer:lpgr];
+    
+    if(self.lieu.location!=nil)
+    {
+        CLLocationCoordinate2D touchMapCoordinate = self.lieu.location.coordinate;
+        
+        AdoptingAnAnnotation *annot = [[AdoptingAnAnnotation alloc] initWithCoordinate:touchMapCoordinate];
+        [self.mapView removeAnnotations:self.mapView.annotations];
+        [self.mapView addAnnotation:annot];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -99,6 +109,9 @@
     AdoptingAnAnnotation *annot = [[AdoptingAnAnnotation alloc] initWithCoordinate:touchMapCoordinate];
     [self.mapView removeAnnotations:self.mapView.annotations];
     [self.mapView addAnnotation:annot];
+    
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:touchMapCoordinate.latitude longitude:touchMapCoordinate.longitude];
+    [[Services shared] addLocationForThisPlace:self.lieu location:location];
 }
 
 - (MKAnnotationView *) mapView:(MKMapView *) mapView viewForAnnotation:(id ) annotation {

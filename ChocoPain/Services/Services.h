@@ -24,6 +24,9 @@
 - (void) loginWithUserName:(NSString *) string andPassword:(NSString*) password withHandler:(void (^)(BOOL result, NSError *error))completionBlock;
 - (void) logoff;
 
+#pragma mark - Map
+- (void)addLocationForThisPlace:(LieuDeTournage *)lieu location:(CLLocation *)location;
+
 #pragma mark - Liking
 - (void) likeThisPlace:(LieuDeTournage*) lieu;
 - (BOOL) alreadyLikedThisPlace:(LieuDeTournage*) lieu;
