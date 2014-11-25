@@ -236,8 +236,23 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)img editingInfo:(NSDictionary *)editInfo {
     //image.image = img;
+    
+    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    // If you go to the folder below, you will find those pictures
+    NSLog(@"%@",docDir);
+    
+    NSLog(@"saving png");
+    NSString *pngFilePath = [NSString stringWithFormat:@"%@/test.png",docDir];
+    NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(img)];
+    [data1 writeToFile:pngFilePath atomically:YES];
+    
+    NSLog(@"saving image done");
+    
+    
     [self dismissViewControllerAnimated:YES completion:^{
         //
+        [self displayImages];
     }];
 }
 - (IBAction)ownerButtonClicked:(id)sender {
