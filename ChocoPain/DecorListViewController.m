@@ -151,7 +151,16 @@
 
 - (void) back:(id) sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    if(self.back == YES)
+    {
+        self.back = NO;
+        self.private = NO;
+        [self initializing];
+    }
+    else
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void) addDecor:(id) sender
