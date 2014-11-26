@@ -245,7 +245,7 @@
             //
         }];
     }
-    else
+    else if(buttonIndex==1)
     {
         self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:self.imgPicker animated:YES completion:^{

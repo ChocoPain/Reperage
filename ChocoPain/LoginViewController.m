@@ -103,6 +103,11 @@
         FakeDemoViewController *vc = [segue destinationViewController];
         vc.type = 1;
     }
+    else if ([[segue identifier] isEqualToString:@"toPro"])
+    {
+        [[Services shared] loginWithUserName:@"Logged" andPassword:@"NO" withHandler:^(BOOL success, NSError *error) {
+        }];
+    }
 }
 
 - (IBAction)textFieldDidBeginEditing:(UITextField *)sender

@@ -159,18 +159,21 @@
         l1.imagesName = [NSArray arrayWithObjects:@"naval1.jpeg", @"naval2.jpeg", @"naval3.jpeg", @"naval4.jpeg", @"naval5.jpeg", @"naval6.jpeg", @"naval7.jpeg", nil];
         l1.likes = 3;
         l1.classifications = [NSMutableArray arrayWithObjects:@"Transport maritime/fluvial", nil];
+        l1.location = [[CLLocation alloc] initWithLatitude:+50.466432 longitude:+4.917220];
         
         LieuDeTournage *l2 = [[LieuDeTournage alloc] init];
         l2.numberId = 2;
         l2.imagesName = [NSArray arrayWithObjects:@"jeux1.jpg", @"jeux2.jpg", @"jeux3.jpg", @"jeux4.jpg", @"jeux5.jpg", nil];
         l2.likes = 1;
         l2.classifications = [NSMutableArray arrayWithObjects:@"Plaines de jeux", @"Sportifs", nil];
+        l2.location = [[CLLocation alloc] initWithLatitude:+14.684656 longitude:-17.469197];
         
         LieuDeTournage *l3 = [[LieuDeTournage alloc] init];
         l3.numberId = 3;
         l3.imagesName = [NSArray arrayWithObjects:@"plage1.jpg", @"plage2.jpg", @"plage3.jpg", nil];
         l3.likes = 0;
         l3.classifications = [NSMutableArray arrayWithObjects:@"Dunes/sable/Plage", nil];
+        l3.location = [[CLLocation alloc] initWithLatitude:+14.684656 longitude:-17.469197];
         
         LieuDeTournage *l4 = [[LieuDeTournage alloc] init];
         l4.numberId = 4;
@@ -179,7 +182,23 @@
         l4.classifications = [NSMutableArray arrayWithObjects:@"Souterrains/grottes", @"Paysages industriels", nil];
         l4.location = [[CLLocation alloc] initWithLatitude:+50.77739113 longitude:+5.65797216];
         
-        self.cacheListe = [NSArray arrayWithObjects:l1, l2, l3, l4, nil];
+       
+        
+        LieuDeTournage *l5 = [[LieuDeTournage alloc] init];
+        l5.numberId = 5;
+        
+        NSMutableArray *img = [[NSMutableArray alloc] initWithCapacity:15];
+        for (int i=1; i<16; i++) {
+            [img addObject:[NSString stringWithFormat:@"fort%i.jpg",i]];
+        }
+        
+        l5.imagesName = img;
+        
+        l5.likes = 3;
+        l5.classifications = [NSMutableArray arrayWithObjects:@"Militaires/Secours/Maintien de l’ordre", @"Paysages industriels", nil];
+        l5.location = [[CLLocation alloc] initWithLatitude:+50.505160 longitude:+4.849539];
+        
+        self.cacheListe = [NSArray arrayWithObjects:l1, l2, l3, l4, l5, nil];
         
     }
     completionBlock(self.cacheListe, nil);
@@ -194,6 +213,7 @@
         l1.imagesName = [NSArray arrayWithObjects:@"naval1.jpeg", @"naval2.jpeg", @"naval3.jpeg", @"naval4.jpeg", @"naval5.jpeg", @"naval6.jpeg", @"naval7.jpeg", nil];
         l1.likes = 3;
         l1.classifications = [NSMutableArray arrayWithObjects:@"Transport maritime/fluvial", nil];
+        l1.location = [[CLLocation alloc] initWithLatitude:+50.466432 longitude:+4.917220];
         l1.owner = YES;
         
         LieuDeTournage *l2 = [[LieuDeTournage alloc] init];
@@ -203,6 +223,7 @@
         l2.classifications = [NSMutableArray arrayWithObjects:@"Equipement collectif", @"Sportifs", nil];
         l2.alreadyUsed = YES;
         l2.explicationUsed = @"Film à grand succès...";
+        l2.location = [[CLLocation alloc] initWithLatitude:+14.684656 longitude:-17.469197];
         
         self.cachePersoListe = [NSArray arrayWithObjects:l1, l2, nil];
         
